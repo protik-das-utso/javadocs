@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Java Documentation - Protik The DEV
+    </title>
+
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Java Documentation For Software Developers" />
+    <meta name="author" content="Protik The DEV" />
+    <link rel="shortcut icon" href="favicon.png" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet" />
+
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css" />
+    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css" />
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css" />
+</head>
+
+<body>
+
+    <header class="header fixed-top">
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+                    <button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
+                        type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="site-logo">
+                        <a class="navbar-brand" href="index.html"><img class="logo-icon me-2" src="favicon.png"
+                                alt="logo" width="50px" /><span class="logo-text">Java <span
+                                    class="text-alt">Documentation</span></span></a>
+                    </div>
+                </div>
+                <!--//docs-logo-wrapper-->
+                <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+                    <div class="top-search-box d-none d-lg-flex">
+                        <form class="search-form">
+                            <input type="text" placeholder="Search the docs..." name="search"
+                                class="form-control search-input" />
+                            <button type="submit" class="btn search-btn" value="Search">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+                        <li class="list-inline-item">
+                            <a href="https://github.com/protik-das-utso" target="_blank"><i
+                                    class="fa-brands fa-github fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://t.me/protikthedev" target="_blank"><i
+                                    class="fa-brands fa-telegram fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="http://facebook.com/protikthedeveloper" target="_blank"><i
+                                    class="fa-brands fa-facebook fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.youtube.com/@protikthedev" target="_blank"><i
+                                    class="fa-brands fa-youtube fa-fw"></i></a>
+                        </li>
+                    </ul>
+                    <!--//social-list-->
+                    <a href="https://t.me/protikthedev" target="_blank" class="btn btn-primary d-none d-lg-flex">Join
+                        Telegram</a>
+                </div>
+                <!--//docs-top-utilities-->
+            </div>
+            <!--//container-->
+        </div>
+        <!--//branding-->
+    </header>
+    <!--//header-->
+
+    <div class="docs-wrapper">
+
+        <div id="docs-sidebar" class="docs-sidebar">
+            <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+                    <input type="text" placeholder="Search the docs..." name="search"
+                        class="form-control search-input" />
+                    <button type="submit" class="btn search-btn" value="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <nav id="docs-nav" class="docs-nav navbar">
+                <ul class="section-items list-unstyled nav flex-column pb-3">
+                    <li class="nav-item section-title">
+                        <a class="nav-link scrollto active" href="#week-1"><span class="theme-icon-holder me-2"><i
+                                    class="fas fa-map-signs"></i></span>Week 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#week-1">Course Introduction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#item-1-2">JDK & IDE Setup</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#item-1-3">Java Structure</a>
+                    </li>
+                    <li class="nav-item section-title mt-3">
+                        <a class="nav-link scrollto" href="#section-2"><span class="theme-icon-holder me-2"><i
+                                    class="fas fa-arrow-down"></i></span>Week 2</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link scrollto" href="#item-2-1">Section Item 2.1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#item-2-2">Section Item 2.2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#item-2-3">Section Item 2.3</a>
+                    </li> -->
+                    <li class="nav-item section-title mt-3">
+                        <a class="nav-link scrollto" href="#section-3"><span class="theme-icon-holder me-2"><i
+                                    class="fas fa-box"></i></span>Week 3</a>
+                    </li>
+                    <li class="nav-item section-title mt-3">
+                        <a class="nav-link scrollto" href="#section-4"><span class="theme-icon-holder me-2"><i
+                                    class="fas fa-cogs"></i></span>Week 4</a>
+                    </li>
+                    <li class="nav-item section-title mt-3">
+                        <a class="nav-link scrollto" href="#section-5"><span class="theme-icon-holder me-2"><i
+                                    class="fas fa-tools"></i></span>Week 5</a>
+                    </li>
+                    <li class="nav-item section-title mt-3">
+                        <a class="nav-link scrollto" href="#section-6"><span class="theme-icon-holder me-2"><i
+                                    class="fas fa-laptop-code"></i></span>Week 6</a>
+                    </li>
+                    <li class="nav-item section-title mt-3">
+                        <a class="nav-link scrollto" href="#section-7"><span class="theme-icon-holder me-2"><i
+                                    class="fas fa-tablet-alt"></i></span>Week 7</a>
+                    </li>
+                    <li class="nav-item section-title mt-3">
+                        <a class="nav-link scrollto" href="#section-8"><span class="theme-icon-holder me-2"><i
+                                    class="fas fa-book-reader"></i></span>Week 8</a>
+                    </li>
+                    <li class="nav-item section-title mt-3">
+                        <a class="nav-link scrollto" href="#section-9"><span class="theme-icon-holder me-2"><i
+                                    class="fas fa-lightbulb"></i></span>Week 9</a>
+                    </li>
+                </ul>
+            </nav>
+            <!--//docs-nav-->
+        </div>
+
+
+        <!--//docs-sidebar-->
+        <div class="docs-content">
+            <div class="container">
+                <article class="docs-article" id="week-1">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">
+                            Course Introduction
+                            <span class="docs-time">Last updated: 1 days ago</span>
+                        </h1>
+                        <section class="docs-intro">
+                            <p>
+                                Welcome to the Basic Java to Advanced Spring Boot Backend
+                                Development Course — a six-month journey designed to take you
+                                from the fundamentals of Java programming to building
+                                full-stack backend applications.
+                            </p>
+
+                            <p>
+                                This course begins with Core Java Essentials, covering syntax,
+                                OOP, and debugging skills, and later expands into JDBC, Spring
+                                Boot, REST APIs, Security, and Microservices
+                            </p>
+                        </section>
+                        <!--//docs-intro-->
+
+                        <h5>Instructor:</h5>
+                        <p>
+                            <a class="theme-link" href="https://facebook.com/protikthedev" target="_blank">PROTIK DAS
+                                UTSO</a>
+                        </p>
+                        <i>Dept. of CSE, Daffodil International University</i>
+                        <div class="alert alert-success" role="alert">
+                            “I don’t just write code — I build possibilities.”
+                        </div>
+
+                        <h4>Learning Goals:</h4>
+                        <ul>
+                            <li>Understand the core concepts of Java programming.</li>
+                            <li>
+                                Set up the development environment for efficient coding.
+                            </li>
+                            <li>Learn how to structure, compile, and run Java programs.</li>
+                            <li>
+                                Build a strong foundation for advanced backend technologies
+                                such as Spring Boot.
+                            </li>
+                        </ul>
+                        <h4>Course Structure</h4>
+                        <ul>
+                            <li><strong>Duration</strong> — 24 weeks | 6 months</li>
+                            <li>
+                                <strong>Schedule</strong> — 3 classes per week × 1.5 hours
+                                each
+                            </li>
+                            <li>
+                                <strong>Total</strong> — ≈ 108 hours + 12 hours
+                                problem-solving sessions
+                            </li>
+                        </ul>
+                        <h4>Outcome:</h4>
+                        <p>
+                            After this introduction, you’ll clearly understand what Java is,
+                            why it’s relevant, and how this course will progressively build
+                            your development skills.
+                        </p>
+                    </header>
+
+                    <!-- JDK & IDE Setup -->
+                    <section class="docs-section" id="item-1-2">
+                        <h1 class="docs-heading">
+                            JDK & IDE Setup
+                            <span class="docs-time">Last updated: 3 days ago</span>
+                        </h1>
+                        <h4>What is the JDK?</h4>
+                        <p>The Java Development Kit (JDK) provides everything needed to develop and run Java
+                            applications:</p>
+                        <ul>
+                            <li><strong>JRE (Java Runtime Environment):</strong> Runs Java programs.</li>
+                            <li><strong>Java Compiler (javac):</strong> Translates <code>.java</code> files into
+                                bytecode.</li>
+                            <li><strong>Development tools:</strong> Debuggers and profilers.</li>
+                        </ul>
+
+                        <h4>Step-by-Step Installation</h4>
+                        <ol>
+                            <li>Download the latest JDK from <a
+                                    href="https://www.oracle.com/apac/java/technologies/downloads/"
+                                    target="_blank">Oracle</a> or <a href="https://openjdk.org/"
+                                    target="_blank">OpenJDK</a>.</li>
+                            <li>Install and follow the wizard for your OS.</li>
+                        </ol>
+
+                        <h4>Set Environment Variables</h4>
+                        <p><strong>Windows:</strong> Add <code>JAVA_HOME</code> to System Variables → point to JDK
+                            folder.</p>
+                        <p><strong>Mac/Linux:</strong> Add to <code>.bashrc</code> or <code>.zshrc</code>:</p>
+                        <pre><code>export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
+export PATH=$JAVA_HOME/bin:$PATH</code></pre>
+
+                        <h4>Verify Installation</h4>
+                        <pre><code>java -version
+javac -version</code></pre>
+                        <p>Output should display the installed version.</p>
+
+                        <h4>Installing an IDE</h4>
+                        <p>An IDE (Integrated Development Environment) helps you code faster and debug easier.</p>
+                        <ul>
+                            <li><strong>IntelliJ IDEA:</strong> Smart and modern, ideal for professionals.</li>
+                            <li><strong>Eclipse:</strong> Stable and used widely in enterprises.</li>
+                            <li><strong>VS Code:</strong> Lightweight with Java extensions.</li>
+                        </ul>
+
+                        <h4>IDE Setup Checklist</h4>
+                        <ol>
+                            <li>Open the IDE → Select <strong>New Project</strong> → <strong>Java Project</strong>.</li>
+                            <li>Set the project SDK to your installed JDK.</li>
+                            <li>Create a class file and write:</li>
+                        </ol>
+
+                        <pre><code>public class Hello {
+    public static void main(String[] args) {
+        System.out.println("Hello, Java!");
+    }
+}</code></pre>
+
+                        <p>Click <strong>Run</strong> — your first Java program is live!</p>
+
+                        <h3>Troubleshooting Tips</h3>
+                        <ul>
+                            <li><strong>“javac not found”</strong> → Check PATH variable.</li>
+                            <li><strong>“Cannot find symbol”</strong> → Ensure file and class names match.</li>
+                            <li><strong>IDE red underlines</strong> → Set the correct JDK path in project settings.</li>
+                        </ul>
+
+                    </section>
+                    <!--//section-->
+
+                    <!-- Java Structure -->
+                    <section class="docs-section" id="item-1-3">
+                        <h1 class="docs-heading">
+                            Java Structure
+                            <span class="docs-time">Last updated: 1 days ago</span>
+                        </h1>
+                        <article>
+
+                            <p>A quick, practical guide to how a basic Java program is organized—classes, methods,
+                                the <code>main</code> entry point, packages, and more.</p>
+
+                            <section id="hello-world">
+                                <h4>Minimal Program (“Hello, Java”)</h4>
+                                <pre><code class="language-java">public class Main {
+    // Program entry point
+    public static void main(String[] args) {
+        System.out.println("Hello, Java!");
+    }
+}</code></pre>
+                                <ul>
+                                    <li><strong>Class name:</strong> <code>Main</code> (must match the file name
+                                        <code>Main.java</code>).
+                                    </li>
+                                    <li><strong>Entry point:</strong>
+                                        <code>public static void main(String[] args)</code> — where execution begins.
+                                    </li>
+                                    <li><strong>Output:</strong> <code>System.out.println(...)</code> writes to the
+                                        console.</li>
+                                </ul>
+                            </section>
+
+                            <section id="file-class">
+                                <h4>Files, Classes, and Bytecode</h4>
+                                <ol>
+                                    <li>Write code in a file named after the <em>public</em> class (e.g.,
+                                        <code>Main.java</code>).
+                                    </li>
+                                    <li>Compile: <code>javac Main.java</code> → generates <code>Main.class</code>
+                                        (bytecode).</li>
+                                    <li>Run: <code>java Main</code> → executes the bytecode on the JVM.</li>
+                                </ol>
+                                <p><em>Note:</em> A file can contain multiple classes, but at most one
+                                    <code>public</code> class, and its name must match the file.
+                                </p>
+                                <br>
+                            </section>
+
+                            <section id="anatomy">
+                                <h4>Program Anatomy</h4>
+                                <div class="table-responsive my-4">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Component</th>
+                                                <th>Description</th>
+                                                <th>Example</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>Package</strong></td>
+                                                <td>Defines a namespace to organize related classes.</td>
+                                                <td><code>package com.example.app;</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Import Statement</strong></td>
+                                                <td>Includes external classes or packages for use in your program.</td>
+                                                <td><code>import java.util.Scanner;</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Class Declaration</strong></td>
+                                                <td>The blueprint that encapsulates data (fields) and behavior
+                                                    (methods).</td>
+                                                <td><code>public class Main { ... }</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Main Method</strong></td>
+                                                <td>The entry point of any Java program—execution begins here.</td>
+                                                <td><code>public static void main(String[] args) { ... }</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Statements</strong></td>
+                                                <td>Instructions executed by the JVM; each must end with a semicolon
+                                                    (<code>;</code>).</td>
+                                                <td><code>System.out.println("Hello, World!");</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Comments</strong></td>
+                                                <td>Used to describe or explain code without affecting execution.</td>
+                                                <td><code>// This is a comment</code></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+
+                            <section id="packages-imports">
+                                <h4>Packages &amp; Imports</h4>
+                                <pre><code class="language-java">package com.acme.app;            // Directory: com/acme/app
+import java.util.ArrayList;      // Single class
+import java.util.*;              // Wildcard (use sparingly)
+
+public class App {
+	public static void main(String[] args) {
+		ArrayList<String> items = new ArrayList<>();
+		items.add("Java");
+		System.out.println(items);
+	}
+}</code></pre>
+                                <ul>
+                                    <li>Directory structure mirrors the package path (<code>com/acme/app</code>).</li>
+                                    <li>Prefer specific imports over wildcards for clarity.</li>
+                                </ul>
+
+                            </section>
+
+                            <section id="access-modifiers">
+                                <h4>Access Modifiers &amp; Class Members</h4>
+                                <pre><code class="language-java">public class Counter {
+	// field (state)
+	private int value;
+
+	// constructor
+	public Counter(int start) {
+		this.value = start;
+	}
+
+	// instance method
+	public void increment() {
+		value++;
+	}
+
+	// static method (belongs to the class)
+	public static Counter ofZero() {
+		return new Counter(0);
+	}
+
+	// getter
+	public int getValue() {
+		return value;
+	}
+
+}
+</code></pre>
+                                <ul>
+                                    <li><strong>public</strong>: visible everywhere; <strong>private</strong>: visible
+                                        only inside the class.</li>
+                                    <li><strong>static</strong> methods/fields belong to the class; instance members
+                                        belong to objects.</li>
+                                    <li>Use constructors to initialize new objects.</li>
+                                </ul>
+
+                            </section>
+
+                            <section id="comments-formatting">
+                                <h4>Comments &amp; Formatting</h4>
+                                <pre><code class="language-java">/**
+ * Calculator utilities.
+ */
+public class Calc {
+    // Single-line comment
+    public static int add(int a, int b) {
+        return a + b;  // Inline comment (brief!)
+    }
+}</code></pre>
+                                <ul>
+                                    <li><strong>Javadoc</strong> (<code>/** ... */</code>) documents APIs and can be
+                                        generated into HTML.</li>
+                                    <li>Follow consistent indentation and braces style for readability.</li>
+                                </ul>
+                            </section>
+
+                            <section id="conventions">
+                                <h4>Naming &amp; Style Conventions</h4>
+                                <ul>
+                                    <li><strong>Classes/Interfaces:</strong> PascalCase (e.g.,
+                                        <code>OrderService</code>).
+                                    </li>
+                                    <li><strong>Methods/Variables:</strong> camelCase (e.g., <code>placeOrder</code>,
+                                        <code>maxCount</code>).
+                                    </li>
+                                    <li><strong>Constants:</strong> UPPER_SNAKE_CASE (e.g., <code>MAX_SIZE</code>).</li>
+                                    <li><strong>One public class per file</strong>; file name = public class name +
+                                        <code>.java</code>.
+                                    </li>
+                                </ul>
+                            </section>
+
+                            <section id="compile-run">
+                                <h4>Compile &amp; Run (CLI)</h4>
+                                <pre><code class="language-bash"># From the folder containing Main.java
+javac Main.java     # compile → Main.class
+java Main           # run</code></pre>
+                                <p>When using packages, compile/run from the project root:</p>
+                                <pre><code class="language-bash">javac com/acme/app/App.java
+java com.acme.app.App</code></pre>
+                            </section>
+
+                            <section id="errors">
+                                <h4>Common Structure Errors</h4>
+                                <ul>
+                                    <li><strong>Class/file mismatch:</strong> Public class <code>App</code> must be in
+                                        <code>App.java</code>.
+                                    </li>
+                                    <li><strong>Missing <code>main</code>:</strong> Applications need an entry point;
+                                        libraries don’t.</li>
+                                    <li><strong>Wrong package path:</strong> Package declaration must match folders.
+                                    </li>
+                                    <li><strong>Visibility issues:</strong> Accessing <code>private</code> members from
+                                        outside the class.</li>
+                                </ul>
+                            </section>
+
+                            <div>
+                                <h4>Next Steps</h4>
+                                <ol>
+                                    <li>Create a new project and a class with <code>main</code>.</li>
+                                    <li>Print some text, declare variables, and call a helper method.</li>
+                                    <li>Refactor into multiple classes to practice files, packages, and imports.</li>
+                                </ol>
+                            </div>
+                        </article>
+                    </section>
+                    <!--//section-->
+                </article>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <!-- Javascript -->
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Page Specific JS -->
+    <script src="assets/plugins/smoothscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="assets/js/highlight-custom.js"></script>
+    <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
+    <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+    <script src="assets/js/docs.js"></script>
+
+</body>
+
+</html>
