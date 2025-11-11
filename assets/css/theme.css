@@ -14520,7 +14520,7 @@ a.text-link:hover {
 }
 
 .docs-article {
-  padding: 2rem;
+  padding: 0.5rem;
   color: #5d6778;
   scroll-margin-top: 69px;
   scroll-snap-margin-top: 69px
