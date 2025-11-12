@@ -529,18 +529,37 @@
 
                     <!-- JDK & IDE Setup -->
                     <section class="docs-section" id="item-1-2">
-                        <h1 class="docs-heading">
-                            JDK & IDE Setup
-                        </h1>
-                        <h4>What is the JDK?</h4>
-                        <p>The Java Development Kit (JDK) provides everything needed to develop and run Java
-                            applications:</p>
-                        <ul>
-                            <li><strong>JRE (Java Runtime Environment):</strong> Runs Java programs.</li>
-                            <li><strong>Java Compiler (javac):</strong> Translates <code>.java</code> files into
-                                bytecode.</li>
-                            <li><strong>Development tools:</strong> Debuggers and profilers.</li>
-                        </ul>
+                        <h2>☕ 1. JDK (Java Development Kit)</h2>
+  <p>Used to write and compile Java programs.</p>
+  <p><strong>Contains:</strong> JRE + compiler (<code>javac</code>) + tools.</p>
+  <p><strong>💡 Example:</strong> When you type:</p>
+  <pre><code>javac Hello.java</code></pre>
+  <p>you’re using the JDK to compile your code.</p>
+
+  <h2>⚙️ 2. JRE (Java Runtime Environment)</h2>
+  <p>Used to run Java programs.</p>
+  <p><strong>Contains:</strong> JVM + libraries needed to execute code.</p>
+  <p><strong>💡 Example:</strong> When you run:</p>
+  <pre><code>java Hello</code></pre>
+  <p>the JRE runs your compiled program.</p>
+
+  <h2>💻 3. JVM (Java Virtual Machine)</h2>
+  <p>The engine that executes the compiled Java bytecode.</p>
+  <p>It makes Java platform-independent — the same code can run on Windows, Mac, or Linux.</p>
+  <p><strong>💡 Example:</strong> The <code>.class</code> file created by the JDK is executed by the JVM inside the JRE.</p>
+
+  <h3>🧩 In short</h3>
+  <ul>
+    <li><strong>JDK</strong> = JRE + Development Tools</li>
+    <li><strong>JRE</strong> = JVM + Libraries</li>
+  </ul>
+
+  <h3>🔁 Example flow</h3>
+  <ol>
+    <li>You write a program → <code>Hello.java</code></li>
+    <li>JDK compiles it → creates <code>Hello.class</code> (bytecode)</li>
+    <li>JRE runs it → JVM executes bytecode line by line</li>
+  </ol>
 
                         <h4>Step-by-Step Installation</h4>
                         <ol>
