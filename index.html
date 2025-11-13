@@ -123,6 +123,9 @@
                         <a class="nav-link scrollto" href="#week-1">Course Introduction</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link scrollto" href="#item-1-1" b style="color: red;">Class 1 - Recording</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link scrollto" href="#item-1-2">JDK & IDE Setup</a>
                     </li>
                     <li class="nav-item">
@@ -526,40 +529,54 @@
                                     target="_blank" style="font-size: 20px;">Download</a></button>
                         </div>
                     </header>
+                    <!-- JDK & IDE Setup -->
+                    <section class="docs-section" id="item-1-1">
+                        <h1 class="docs-heading">
+                            Class 1 - Recording
+                        </h1>
+
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/hPF2XUoWNn8?si=Coq6YMQzeuGbEDlK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                    </section>
+                    <!--//section-->
 
                     <!-- JDK & IDE Setup -->
                     <section class="docs-section" id="item-1-2">
-                        <h2>☕ 1. JDK (Java Development Kit)</h2>
-  <p>Used to write and compile Java programs.</p>
-  <p><strong>Contains:</strong> JRE + compiler (<code>javac</code>) + tools.</p>
-  <p><strong>💡 Example:</strong> When you type:</p>
-  <pre><code>javac Hello.java</code></pre>
-  <p>you’re using the JDK to compile your code.</p>
+                        <h1 class="docs-heading">
+                           JDK & IDE Setup
+                        </h1>
+                        <h4>☕ 1. JDK (Java Development Kit)</h4>
+                        <p>Used to write and compile Java programs.</p>
+                        <p><strong>Contains:</strong> JRE + compiler (<code>javac</code>) + tools.</p>
+                        <p><strong>💡 Example:</strong> When you type:</p>
+                        <pre><code>javac Hello.java</code></pre>
+                        <p>you’re using the JDK to compile your code.</p>
 
-  <h2>⚙️ 2. JRE (Java Runtime Environment)</h2>
-  <p>Used to run Java programs.</p>
-  <p><strong>Contains:</strong> JVM + libraries needed to execute code.</p>
-  <p><strong>💡 Example:</strong> When you run:</p>
-  <pre><code>java Hello</code></pre>
-  <p>the JRE runs your compiled program.</p>
+                        <h4>⚙️ 2. JRE (Java Runtime Environment)</h4>
+                        <p>Used to run Java programs.</p>
+                        <p><strong>Contains:</strong> JVM + libraries needed to execute code.</p>
+                        <p><strong>💡 Example:</strong> When you run:</p>
+                        <pre><code>java Hello</code></pre>
+                        <p>the JRE runs your compiled program.</p>
 
-  <h2>💻 3. JVM (Java Virtual Machine)</h2>
-  <p>The engine that executes the compiled Java bytecode.</p>
-  <p>It makes Java platform-independent — the same code can run on Windows, Mac, or Linux.</p>
-  <p><strong>💡 Example:</strong> The <code>.class</code> file created by the JDK is executed by the JVM inside the JRE.</p>
+                        <h4>💻 3. JVM (Java Virtual Machine)</h4>
+                        <p>The engine that executes the compiled Java bytecode.</p>
+                        <p>It makes Java platform-independent — the same code can run on Windows, Mac, or Linux.</p>
+                        <p><strong>💡 Example:</strong> The <code>.class</code> file created by the JDK is executed by
+                            the JVM inside the JRE.</p>
 
-  <h3>🧩 In short</h3>
-  <ul>
-    <li><strong>JDK</strong> = JRE + Development Tools</li>
-    <li><strong>JRE</strong> = JVM + Libraries</li>
-  </ul>
+                        <h4>🧩 In short</h4>
+                        <ul>
+                            <li><strong>JDK</strong> = JRE + Development Tools</li>
+                            <li><strong>JRE</strong> = JVM + Libraries</li>
+                        </ul>
 
-  <h3>🔁 Example flow</h3>
-  <ol>
-    <li>You write a program → <code>Hello.java</code></li>
-    <li>JDK compiles it → creates <code>Hello.class</code> (bytecode)</li>
-    <li>JRE runs it → JVM executes bytecode line by line</li>
-  </ol>
+                        <h4>🔁 Example flow</h4>
+                        <ol>
+                            <li>You write a program → <code>Hello.java</code></li>
+                            <li>JDK compiles it → creates <code>Hello.class</code> (bytecode)</li>
+                            <li>JRE runs it → JVM executes bytecode line by line</li>
+                        </ol>
 
                         <h4>Step-by-Step Installation</h4>
                         <ol>
@@ -605,7 +622,7 @@ javac -version</code></pre>
 
                         <p>Click <strong>Run</strong> — your first Java program is live!</p>
 
-                        <h3>Troubleshooting Tips</h3>
+                        <h4>Troubleshooting Tips</h4>
                         <ul>
                             <li><strong>“javac not found”</strong> → Check PATH variable.</li>
                             <li><strong>“Cannot find symbol”</strong> → Ensure file and class names match.</li>
