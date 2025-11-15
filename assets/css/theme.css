@@ -447,6 +447,23 @@ kbd {
   background-color: var(--bs-body-color);
   border-radius: .25rem
 }
+.full-width-btn {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      background-color: #ff0000; /* YouTube red */
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .full-width-btn:hover {
+      background-color: #cc0000;
+    }
 
 kbd kbd {
   padding: 0;
