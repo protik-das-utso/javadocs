@@ -232,13 +232,19 @@ h1,
   color: var(--bs-heading-color)
 }
 
+h2{
+  color: #ff0000!important;
+}
+
+h3{
+  color: #3c06ff!important;
+}
+
 h4{
-  color: #b72828!important;
-  font-weight: 900!important;
+  color: #49e70a!important;
 }
 h5{
   color: #da990c!important;
-  font-weight: 900!important;
 }
 
 h1,

@@ -137,12 +137,6 @@
                     <li class="nav-item">
                         <a class="nav-link scrollto" href="#item-1-5">Variables</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link scrollto" href="#item-1-6">Control Flow (if, loop, switch)</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link scrollto" href="#item-1-7">Debugging Basics</a>
-                    </li>
                     <li class="nav-item section-title mt-3">
                         <a class="nav-link scrollto" href="#section-2"><span class="theme-icon-holder me-2"><i
                                     class="fas fa-arrow-down"></i></span>Week 2</a>
@@ -1069,7 +1063,7 @@ int population = 1_000_000; // underscores for readability</code></pre>
                             <h3>2. Floating-Point Types</h3>
                             <p>Used to represent numbers with fractional parts.</p>
 
-                            <h2><code>float</code></h2>
+                            <h4><code>float</code></h4>
                             <ul>
                                 <li>Size: 32-bit IEEE 754 floating-point.</li>
                                 <li>Precision: about 6–7 decimal digits.</li>
@@ -1079,7 +1073,7 @@ int population = 1_000_000; // underscores for readability</code></pre>
                             </ul>
                             <pre><code>float average = 3.14f; // 'f' or 'F' required</code></pre>
 
-                            <h2><code>double</code></h2>
+                            <h4><code>double</code></h4>
                             <ul>
                                 <li>Size: 64-bit IEEE 754 floating-point.</li>
                                 <li>Precision: about 15–16 decimal digits.</li>
@@ -1109,7 +1103,7 @@ char unicodeChar = '\u03A9'; // Greek capital letter Omega</code></pre>
                             <pre><code>boolean isJavaFun = true;
 boolean isCold = false;</code></pre>
 
-                            <h2>Reference (Non-Primitive) Data Types</h2>
+                            <h4>Reference (Non-Primitive) Data Types</h4>
                             <p>Reference types refer to objects stored in the heap. The variable holds a
                                 <strong>reference</strong> (similar to an address) to the object.
                             </p>
@@ -1158,34 +1152,25 @@ System.out.println(values.length); // 5</code></pre>
 
 Day today = Day.MONDAY;</code></pre>
 
-                            <h2>Enums in Java Overview</h2>
-                            <p>Enums in Java are used to represent a fixed set of named constants, making your code
-                                safer, more readable, and easier to maintain, especially when you want to restrict
-                                possible values a variable can take, such as days of the week, months, colors, or
-                                predefined states in a system.</p>
+<h4>Enums in Java Overview</h4>
+<p>Enums in Java are used to represent a fixed set of named constants, making your code safer, more readable, and easier to maintain, especially when you want to restrict possible values a variable can take, such as days of the week, months, colors, or predefined states in a system.</p>
 
-                            <h2>Common Use Cases for Enum in Java</h2>
+<h4>Common Use Cases for Enum in Java</h4>
 
-                            <h3>Representing Fixed Categories</h3>
-                            <p>Enums help define a set of constant values like days (MONDAY to SUNDAY), levels (LOW,
-                                MEDIUM, HIGH), ticket categories (CRITICAL, HIGH, MEDIUM, LOW), or seasons (WINTER,
-                                SPRING, SUMMER, AUTUMN).</p>
+<h3>Representing Fixed Categories</h3>
+<p>Enums help define a set of constant values like days (MONDAY to SUNDAY), levels (LOW, MEDIUM, HIGH), ticket categories (CRITICAL, HIGH, MEDIUM, LOW), or seasons (WINTER, SPRING, SUMMER, AUTUMN).</p>
 
-                            <h3>Control Flow Statements</h3>
-                            <p>Enums are widely used in switch-case and if-else statements, for handling logic based on
-                                these named values. This improves code clarity and reduces errors from using arbitrary
-                                numbers or strings.</p>
+<h3>Control Flow Statements</h3>
+<p>Enums are widely used in switch-case and if-else statements, for handling logic based on these named values. This improves code clarity and reduces errors from using arbitrary numbers or strings.</p>
 
-                            <h3>Type Safety</h3>
-                            <p>They ensure type safety by restricting values to those defined in the enum, unlike
-                                traditional final static constants which can be any value.</p>
+<h3>Type Safety</h3>
+<p>They ensure type safety by restricting values to those defined in the enum, unlike traditional final static constants which can be any value.</p>
 
-                            <h3>Grouping Related Constants</h3>
-                            <p>Useful for grouping constants related by context, for example, status codes, user roles,
-                                or configuration options in applications.</p>
+<h3>Grouping Related Constants</h3>
+<p>Useful for grouping constants related by context, for example, status codes, user roles, or configuration options in applications.</p>
 
-                            <h2>Example of Using Enum</h2>
-                            <pre>
+<h4>Example of Using Enum</h4>
+<pre>
     <code  class="language-java">enum TicketCategory {
     CRITICAL, HIGH, MEDIUM, LOW;
 }
@@ -1211,23 +1196,18 @@ public class Main {
 }
 </code>
 </pre>
-                            <p>This code demonstrates how enums define constant categories and integrate smoothly with
-                                control statements like switch, improving code reliability and readability.</p>
+<p>This code demonstrates how enums define constant categories and integrate smoothly with control statements like switch, improving code reliability and readability.</p>
 
-                            <h2>Advanced Use</h2>
+<h4>Advanced Use</h4>
 
-                            <h3>Enums with Methods and Fields</h3>
-                            <p>Enums in Java can have methods, fields, and constructors, enabling them to store and
-                                operate on more complex data, such as associating a value or description with each
-                                constant.</p>
+<h3>Enums with Methods and Fields</h3>
+<p>Enums in Java can have methods, fields, and constructors, enabling them to store and operate on more complex data, such as associating a value or description with each constant.</p>
 
-                            <h3>Interface Implementation</h3>
-                            <p>Enums can implement interfaces to provide flexible code design patterns, such as
-                                providing descriptions or custom behaviors for each constant.</p>
+<h3>Interface Implementation</h3>
+<p>Enums can implement interfaces to provide flexible code design patterns, such as providing descriptions or custom behaviors for each constant.</p>
 
-                            <h2>Conclusion</h2>
-                            <p>Overall, enums in Java are preferred whenever you need a variable to accept only a
-                                predetermined set of constant values, ensuring code safety and ease of maintenance.</p>
+<h4>Conclusion</h4>
+<p>Overall, enums in Java are preferred whenever you need a variable to accept only a predetermined set of constant values, ensuring code safety and ease of maintenance.</p>
 
 
 
@@ -1242,12 +1222,9 @@ public class Main {
                             <pre><code>record Point(int x, int y) {}
 
 Point p = new Point(10, 20); // x=10, y=20</code></pre>
-                            <p>In Java 16 and later, you can use a record to simplify classes that are mainly data
-                                carriers. A record automatically provides private final fields, a constructor, getters,
-                                equals(), hashCode(), and toString() methods, which greatly reduces boilerplate code.s
-                            </p>
+<p>In Java 16 and later, you can use a record to simplify classes that are mainly data carriers. A record automatically provides private final fields, a constructor, getters, equals(), hashCode(), and toString() methods, which greatly reduces boilerplate code.s</p>
 
-                            <h2>Wrapper Classes and Autoboxing</h2>
+                            <h4>Wrapper Classes and Autoboxing</h4>
 
                             <p>Each primitive type has a corresponding wrapper class in <code>java.lang</code>:</p>
                             <ul>
@@ -1261,7 +1238,7 @@ Point p = new Point(10, 20); // x=10, y=20</code></pre>
                                 <li><code>boolean</code> → <code>Boolean</code></li>
                             </ul>
 
-                            <h2>Autoboxing and Unboxing</h2>
+                            <h4>Autoboxing and Unboxing</h4>
                             <p>
                                 <strong>Autoboxing</strong> is automatic conversion from primitive to wrapper type.
                                 <strong>Unboxing</strong> is the reverse.
@@ -1278,9 +1255,9 @@ int x = list.get(0); // unboxing</code></pre>
                             <pre><code>Integer n = null;
 int y = n; // throws NullPointerException</code></pre>
 
-                            <h2>Type Conversion and Casting</h2>
+                            <h4>Type Conversion and Casting</h4>
 
-                            <h3>Widening Primitive Conversions (Safe, Implicit)</h3>
+                            <h5>Widening Primitive Conversions (Safe, Implicit)</h5>
                             <p>Small type → larger type, done automatically.</p>
                             <ul>
                                 <li><code>byte → short → int → long → float → double</code></li>
@@ -1290,7 +1267,7 @@ int y = n; // throws NullPointerException</code></pre>
 long l = i;       // OK, widening
 double d = l;     // OK, widening</code></pre>
 
-                            <h3>Narrowing Primitive Conversions (Explicit, Risky)</h3>
+                            <h5>Narrowing Primitive Conversions (Explicit, Risky)</h5>
                             <p>Large type → smaller type, requires explicit cast and may lose data.</p>
                             <pre><code>long big = 130L;
 byte b = (byte) big; // overflow: result is -126
@@ -1298,7 +1275,7 @@ byte b = (byte) big; // overflow: result is -126
 double v = 3.9;
 int k = (int) v;     // k = 3, fractional part lost</code></pre>
 
-                            <h3>Reference Type Casting</h3>
+                            <h5>Reference Type Casting</h5>
                             <p>
                                 You can cast references within an inheritance hierarchy. Incorrect casts cause
                                 <code>ClassCastException</code> at runtime.
@@ -1309,7 +1286,7 @@ String str = (String) obj;      // OK
 Object obj2 = Integer.valueOf(10);
 String s = (String) obj2;       // ClassCastException at runtime</code></pre>
 
-                            <h2>Default Values</h2>
+                            <h4>Default Values</h4>
                             <p>Default values apply to <strong>fields</strong> (instance or static), not to local
                                 variables.</p>
                             <ul>
@@ -1327,11 +1304,11 @@ String s = (String) obj2;       // ClassCastException at runtime</code></pre>
                             <p>Local variables <strong>must</strong> be initialized before use or the code will not
                                 compile.</p>
 
-                            <h2>Newer Language Features Related to Types (Recent Java Versions)</h2>
+                            <h4>Newer Language Features Related to Types (Recent Java Versions)</h4>
                             <p>While the primitive data types themselves have not changed, newer Java versions added
                                 features that affect how types are used and inferred.</p>
 
-                            <h3>1. Local Variable Type Inference (<code>var</code>, Java 10+)</h3>
+                            <h5>1. Local Variable Type Inference (<code>var</code>, Java 10+)</h5>
                             <p>
                                 Java allows <code>var</code> for local variables, where the type is inferred by the
                                 compiler.
@@ -1344,7 +1321,7 @@ var text = "Hello";  // inferred as String
 // Still type-safe:
 text = 20;           // compile-time error</code></pre>
 
-                            <h3>2. Text Blocks for Strings (Java 13+)</h3>
+                            <h5>2. Text Blocks for Strings (Java 13+)</h5>
                             <p>Multi-line string literals using <code>"""</code> are still <code>String</code> type.</p>
                             <pre><code>String json = """
 {
@@ -1353,7 +1330,7 @@ text = 20;           // compile-time error</code></pre>
 }
 """;</code></pre>
 
-                            <h3>3. Records (Java 16+)</h3>
+                            <h5>3. Records (Java 16+)</h5>
                             <p>Records provide a concise syntax for classes that are mainly data carriers.</p>
                             <pre><code>record User(String name, int age) {}
 
@@ -1361,14 +1338,14 @@ User u = new User("Bob", 25);
 String name = u.name();
 int age = u.age();</code></pre>
 
-                            <h3>4. Pattern Matching for <code>instanceof</code> (Java 16+)</h3>
+                            <h5>4. Pattern Matching for <code>instanceof</code> (Java 16+)</h5>
                             <p>Makes type checking and casting more concise.</p>
                             <pre><code>Object obj = "Hello";
 if (obj instanceof String s) {
     System.out.println(s.toUpperCase());
 }</code></pre>
 
-                            <h2>Common Exceptions Related to Data Types</h2>
+                            <h4>Common Exceptions Related to Data Types</h4>
 
                             <ul>
                                 <li><strong><code>NullPointerException</code></strong>
@@ -1413,9 +1390,9 @@ int c = a / b; // ArithmeticException: / by zero</code></pre>
                                 </li>
                             </ul>
 
-                            <h2>Most Commonly Mistaken Concepts About Java Data Types</h2>
+                            <h4>Most Commonly Mistaken Concepts About Java Data Types</h4>
 
-                            <h3>1. <code>==</code> vs <code>equals()</code></h3>
+                            <h5>1. <code>==</code> vs <code>equals()</code></h5>
                             <ul>
                                 <li><code>==</code> compares <strong>references</strong> for objects (same memory
                                     location).</li>
@@ -1428,13 +1405,13 @@ String b = new String("Java");
 System.out.println(a == b);        // false (different objects)
 System.out.println(a.equals(b));   // true (same content)</code></pre>
 
-                            <h3>2. Treating <code>String</code> as a Primitive</h3>
+                            <h5>2. Treating <code>String</code> as a Primitive</h5>
                             <ul>
                                 <li><code>String</code> is not primitive; it is a class in <code>java.lang</code>.</li>
                                 <li>It behaves like a value in many scenarios, but it's still a reference.</li>
                             </ul>
 
-                            <h3>3. Floating-Point Precision</h3>
+                            <h5>3. Floating-Point Precision</h5>
                             <ul>
                                 <li><code>float</code> and <code>double</code> are imprecise for some decimal values.
                                 </li>
@@ -1443,7 +1420,7 @@ System.out.println(a.equals(b));   // true (same content)</code></pre>
                             <pre><code>double x = 0.1 + 0.2;
 System.out.println(x); // may print 0.30000000000000004</code></pre>
 
-                            <h3>4. Integer Division</h3>
+                            <h5>4. Integer Division</h5>
                             <ul>
                                 <li>Dividing two integers performs <strong>integer division</strong>, discarding the
                                     fractional part.</li>
@@ -1455,7 +1432,7 @@ double d = a / b; // 2.0, still integer division first
 
 double correct = a / 2.0; // 2.5</code></pre>
 
-                            <h3>5. Overflow and Underflow</h3>
+                            <h5>5. Overflow and Underflow</h5>
                             <ul>
                                 <li>Primitive integer types (<code>byte</code>, <code>short</code>, <code>int</code>,
                                     <code>long</code>) overflow silently.
@@ -1464,7 +1441,7 @@ double correct = a / 2.0; // 2.5</code></pre>
                             <pre><code>int max = Integer.MAX_VALUE; // 2147483647
 int overflow = max + 1;      // -2147483648 (wraps around)</code></pre>
 
-                            <h3>6. Confusing <code>char</code> with <code>String</code></h3>
+                            <h5>6. Confusing <code>char</code> with <code>String</code></h5>
                             <ul>
                                 <li><code>char</code> uses single quotes, <code>String</code> uses double quotes.</li>
                                 <li><code>char</code> is a single 16-bit code unit, <code>String</code> is a sequence of
@@ -1473,7 +1450,7 @@ int overflow = max + 1;      // -2147483648 (wraps around)</code></pre>
                             <pre><code>char c = 'A';
 String s = "A";</code></pre>
 
-                            <h3>7. Assuming Arrays Grow Dynamically</h3>
+                            <h5>7. Assuming Arrays Grow Dynamically</h5>
                             <ul>
                                 <li>Arrays in Java have fixed length.</li>
                                 <li>To have dynamic growth, use collections like <code>ArrayList</code>.</li>
@@ -1486,7 +1463,7 @@ list.add(1);
 list.add(2);
 // list size can grow dynamically</code></pre>
 
-                            <h3>8. Misusing Autoboxing and Caching</h3>
+                            <h5>8. Misusing Autoboxing and Caching</h5>
                             <p>
                                 Wrapper classes cache some values (e.g., <code>Integer</code> from -128 to 127),
                                 which can lead to confusion when using <code>==</code>.
@@ -1500,13 +1477,13 @@ Integer n = 128;
 System.out.println(m == n); // false (different objects)
 System.out.println(m.equals(n)); // true</code></pre>
 
-                            <h3>9. Thinking <code>var</code> Means Dynamic Typing</h3>
+                            <h5>9. Thinking <code>var</code> Means Dynamic Typing</h5>
                             <ul>
                                 <li><code>var</code> does <strong>not</strong> mean the type can change.</li>
                                 <li>Type is inferred once at compile time and cannot change later.</li>
                             </ul>
 
-                            <h2>Best Practices When Working with Data Types in Java</h2>
+                            <h4>Best Practices When Working with Data Types in Java</h4>
                             <ul>
                                 <li>Prefer <code>int</code> and <code>double</code> for general numeric work unless you
                                     have a specific reason to use others.</li>
@@ -1524,7 +1501,7 @@ System.out.println(m.equals(n)); // true</code></pre>
                                 <li>Initialize local variables before use; do not rely on defaults.</li>
                             </ul>
 
-                            <h2>Summary</h2>
+                            <h4>Summary</h4>
                             <p>
                                 Java data types are divided into <strong>primitive</strong> and
                                 <strong>reference</strong> types.
@@ -1549,7 +1526,7 @@ System.out.println(m.equals(n)); // true</code></pre>
                                 known at compile time.
                             </p>
 
-                            <h2>Key Characteristics of Java Variables</h2>
+                            <h4>Key Characteristics of Java Variables</h4>
                             <ul>
                                 <li>Each variable has a <strong>name</strong>, a <strong>type</strong>, and a
                                     <strong>value</strong>.
@@ -1561,7 +1538,7 @@ System.out.println(m.equals(n)); // true</code></pre>
                                 <li>Java variables must be <strong>declared</strong> before use.</li>
                             </ul>
 
-                            <h2>Basic Syntax</h2>
+                            <h4>Basic Syntax</h4>
                             <pre><code>&lt;type&gt; &lt;variableName&gt; [= initialValue] ;
 
 int count;
@@ -1574,9 +1551,9 @@ String name = "Alice";</code></pre>
                                 <li><strong>Initialization</strong>: gives the variable an initial value.</li>
                             </ul>
 
-                            <h2>Classification of Variables</h2>
+                            <h4>Classification of Variables</h4>
 
-                            <h3>By Data Type</h3>
+                            <h5>By Data Type</h5>
                             <ul>
                                 <li><strong>Primitive type variables</strong> – hold primitive values like
                                     <code>int</code>, <code>double</code>, <code>boolean</code>, etc.
@@ -1585,7 +1562,7 @@ String name = "Alice";</code></pre>
                                     (e.g., <code>String</code>, arrays, custom classes).</li>
                             </ul>
 
-                            <h3>By Scope / Where They Are Declared</h3>
+                            <h5>By Scope / Where They Are Declared</h5>
                             <ul>
                                 <li><strong>Local variables</strong> – declared inside methods, constructors, or blocks.
                                 </li>
@@ -1598,7 +1575,7 @@ String name = "Alice";</code></pre>
                                 </li>
                             </ul>
 
-                            <h2>Local Variables</h2>
+                            <h4>Local Variables</h4>
                             <p>Local variables are declared inside methods, constructors, or blocks and exist only
                                 within that scope.</p>
                             <pre><code>void doSomething() {
@@ -1617,7 +1594,7 @@ String name = "Alice";</code></pre>
                                     finishes.</li>
                             </ul>
 
-                            <h2>Parameter Variables</h2>
+                            <h4>Parameter Variables</h4>
                             <p>
                                 Parameters are variables declared in a method or constructor’s parameter list. They
                                 receive values when the method is called.
@@ -1633,7 +1610,7 @@ String name = "Alice";</code></pre>
                                 <li>They must have a type and a name.</li>
                             </ul>
 
-                            <h2>Instance Variables (Fields)</h2>
+                            <h4>Instance Variables (Fields)</h4>
                             <p>Instance variables belong to an <strong>object</strong> (instance of the class).</p>
                             <pre><code>class Person {
     String name;    // instance variable
@@ -1653,7 +1630,7 @@ String name = "Alice";</code></pre>
                                 </li>
                             </ul>
 
-                            <h2>Static Variables (Class Variables)</h2>
+                            <h4>Static Variables (Class Variables)</h4>
                             <p>Static variables belong to the <strong>class itself</strong>, not to any particular
                                 object.</p>
                             <pre><code>class Counter {
@@ -1674,13 +1651,13 @@ System.out.println(Counter.count); // 2</code></pre>
                                 <li>Useful for constants and shared state (e.g., caches, counters).</li>
                             </ul>
 
-                            <h2>Variable Initialization</h2>
+                            <h4>Variable Initialization</h4>
 
-                            <h3>1. Explicit Initialization</h3>
+                            <h5>1. Explicit Initialization</h5>
                             <pre><code>int x = 10;
 String message = "Hello";</code></pre>
 
-                            <h3>2. Default Initialization (Fields Only)</h3>
+                            <h5>2. Default Initialization (Fields Only)</h5>
                             <pre><code>class Example {
     int n;         // default 0
     boolean flag;  // default false
@@ -1690,13 +1667,13 @@ String message = "Hello";</code></pre>
                             <p>Local variables <strong>do not</strong> get default values and must be initialized before
                                 use.</p>
 
-                            <h3>3. Multiple Declarations</h3>
+                            <h5>3. Multiple Declarations</h5>
                             <pre><code>int a, b, c;
 int x = 1, y = 2, z = 3;</code></pre>
 
                             <p>For clarity, it is often better to declare one variable per line.</p>
 
-                            <h2>Final Variables (Constants)</h2>
+                            <h4>Final Variables (Constants)</h4>
                             <p>A <code>final</code> variable can be assigned only once.</p>
                             <pre><code>final int MAX_SIZE = 100;
 final String APP_NAME = "MyApp";</code></pre>
@@ -1710,7 +1687,7 @@ final String APP_NAME = "MyApp";</code></pre>
 list.add("A");    // OK, modifying the object
 // list = new ArrayList&lt;&gt;(); // Error: cannot assign a value to final variable</code></pre>
 
-                            <h2>Blank Final Variables</h2>
+                            <h4>Blank Final Variables</h4>
                             <p>Final variables that are declared but not initialized immediately, typically assigned in
                                 the constructor.</p>
                             <pre><code>class User {
@@ -1721,7 +1698,7 @@ list.add("A");    // OK, modifying the object
     }
 }</code></pre>
 
-                            <h2>Effectively Final Variables</h2>
+                            <h4>Effectively Final Variables</h4>
                             <p>
                                 A variable is <strong>effectively final</strong> if it is assigned only once, even
                                 without the <code>final</code> keyword.
@@ -1732,7 +1709,7 @@ list.add("A");    // OK, modifying the object
     Runnable r = () -&gt; System.out.println(base); // allowed
 }</code></pre>
 
-                            <h2>Local Variable Type Inference (<code>var</code>, Java 10+)</h2>
+                            <h4>Local Variable Type Inference (<code>var</code>, Java 10+)</h4>
                             <p>
                                 Java supports <strong>local variable type inference</strong> using <code>var</code> for
                                 local variables
@@ -1758,7 +1735,7 @@ var list = new ArrayList&lt;String&gt;(); // inferred as ArrayList&lt;String&gt;
 var x;                    // Error: cannot use 'var' without initializer
 var nothing = null;       // Error: cannot infer type from null alone</code></pre>
 
-                            <h2>Naming Variables</h2>
+                            <h4>Naming Variables</h4>
                             <ul>
                                 <li>Use <strong>camelCase</strong> for variables and methods: <code>totalAmount</code>,
                                     <code>userName</code>.
@@ -1774,22 +1751,22 @@ var nothing = null;       // Error: cannot infer type from null alone</code></pr
                                 </li>
                             </ul>
 
-                            <h2>Scope and Lifetime</h2>
+                            <h4>Scope and Lifetime</h4>
 
-                            <h3>1. Block Scope</h3>
+                            <h5>1. Block Scope</h5>
                             <pre><code>if (condition) {
     int a = 10;   // a is visible only inside this block
 }
 // a is not visible here</code></pre>
 
-                            <h3>2. Method Scope</h3>
+                            <h5>2. Method Scope</h5>
                             <p>Local variables declared in a method are not visible outside that method.</p>
 
-                            <h3>3. Class Scope</h3>
+                            <h5>3. Class Scope</h5>
                             <p>Instance and static variables are visible to all methods of the class (subject to access
                                 modifiers).</p>
 
-                            <h2>Shadowing</h2>
+                            <h4>Shadowing</h4>
                             <p>
                                 A local or parameter variable can <strong>shadow</strong> a field with the same name.
                                 Use <code>this</code> to refer to the field.
@@ -1802,7 +1779,7 @@ var nothing = null;       // Error: cannot infer type from null alone</code></pr
     }
 }</code></pre>
 
-                            <h2>Variables and Memory</h2>
+                            <h4>Variables and Memory</h4>
                             <ul>
                                 <li><strong>Local variables and parameters</strong> live on the stack (conceptually) and
                                     are destroyed when the method returns.</li>
@@ -1811,9 +1788,9 @@ var nothing = null;       // Error: cannot infer type from null alone</code></pr
                                 <li>Reference variables hold an address pointing to an object on the heap.</li>
                             </ul>
 
-                            <h2>Common Errors and Exceptions Related to Variables</h2>
+                            <h4>Common Errors and Exceptions Related to Variables</h4>
 
-                            <h3>Compile-Time Errors (Not Exceptions)</h3>
+                            <h5>Compile-Time Errors (Not Exceptions)</h5>
                             <ul>
                                 <li><strong>"variable might not have been initialized"</strong> – using a local variable
                                     before assigning a value.</li>
@@ -1828,7 +1805,7 @@ var nothing = null;       // Error: cannot infer type from null alone</code></pr
     // System.out.println(x); // Error: variable x might not have been initialized
 }</code></pre>
 
-                            <h3>Runtime Exceptions (Caused by Incorrect Use of Variables)</h3>
+                            <h5>Runtime Exceptions (Caused by Incorrect Use of Variables)</h5>
                             <ul>
                                 <li><strong>NullPointerException</strong> – using a reference variable that is
                                     <code>null</code>.
@@ -1845,9 +1822,9 @@ s.length(); // NullPointerException
 int[] arr = new int[3];
 arr[3] = 10; // ArrayIndexOutOfBoundsException</code></pre>
 
-                            <h2>Most Commonly Mistaken Concepts About Variables in Java</h2>
+                            <h4>Most Commonly Mistaken Concepts About Variables in Java</h4>
 
-                            <h3>1. Java Is Pass-by-Value (Always)</h3>
+                            <h5>1. Java Is Pass-by-Value (Always)</h5>
                             <p>
                                 Many people think objects are passed by reference. In reality, Java passes the
                                 <strong>value of the reference</strong> (a copy of the reference).
@@ -1872,13 +1849,13 @@ System.out.println(sb); // Hello world</code></pre>
                                 the object it points to does.
                             </p>
 
-                            <h3>2. Confusing <code>=</code> with <code>==</code></h3>
+                            <h5>2. Confusing <code>=</code> with <code>==</code></h5>
                             <ul>
                                 <li><code>=</code> is <strong>assignment</strong>.</li>
                                 <li><code>==</code> is <strong>comparison</strong>.</li>
                             </ul>
 
-                            <h3>3. Using <code>==</code> for Strings and Objects</h3>
+                            <h5>3. Using <code>==</code> for Strings and Objects</h5>
                             <p>
                                 <code>==</code> compares whether two reference variables point to the <strong>same
                                     object</strong>,
@@ -1890,18 +1867,18 @@ String b = new String("Java");
 System.out.println(a == b);      // false (different objects)
 System.out.println(a.equals(b)); // true (same content)</code></pre>
 
-                            <h3>4. Assuming Local Variables Have Default Values</h3>
+                            <h5>4. Assuming Local Variables Have Default Values</h5>
                             <p>Local variables <strong>must</strong> be initialized before use; there are no automatic
                                 defaults.</p>
 
-                            <h3>5. Misunderstanding <code>static</code> vs Instance Variables</h3>
+                            <h5>5. Misunderstanding <code>static</code> vs Instance Variables</h5>
                             <ul>
                                 <li>Static variables are shared across all instances.</li>
                                 <li>Instance variables are unique to each object.</li>
                             </ul>
                             <p>Accidentally using static variables for per-object state leads to bugs.</p>
 
-                            <h3>6. Thinking <code>var</code> Makes Java Dynamically Typed</h3>
+                            <h5>6. Thinking <code>var</code> Makes Java Dynamically Typed</h5>
                             <ul>
                                 <li>With <code>var</code>, the compiler still decides a single, fixed type at compile
                                     time.</li>
@@ -1910,7 +1887,7 @@ System.out.println(a.equals(b)); // true (same content)</code></pre>
                             <pre><code>var x = 10;  // int
 // x = "Hello"; // Error: incompatible types</code></pre>
 
-                            <h3>7. Variable Shadowing Confusion</h3>
+                            <h5>7. Variable Shadowing Confusion</h5>
                             <p>Forgetting that a local or parameter variable shadows a field can lead to unexpected
                                 behavior.</p>
                             <pre><code>class Demo {
@@ -1925,15 +1902,15 @@ System.out.println(a.equals(b)); // true (same content)</code></pre>
     this.value = value;       // assigns parameter to field
 }</code></pre>
 
-                            <h2>Newer Language Features Related to Variables</h2>
+                            <h4>Newer Language Features Related to Variables</h4>
 
-                            <h3>1. <code>var</code> (Java 10+)</h3>
+                            <h5>1. <code>var</code> (Java 10+)</h5>
                             <ul>
                                 <li>Reduces verbosity in local variable declarations.</li>
                                 <li>Particularly useful with generics and complex types.</li>
                             </ul>
 
-                            <h3>2. Pattern Variables in <code>instanceof</code> (Java 16+)</h3>
+                            <h5>2. Pattern Variables in <code>instanceof</code> (Java 16+)</h5>
                             <p>
                                 Pattern matching introduces <strong>pattern variables</strong> that combine type tests
                                 and casts.
@@ -1943,7 +1920,7 @@ if (obj instanceof String s) { // s is a pattern variable
     System.out.println(s.toUpperCase());
 }</code></pre>
 
-                            <h3>3. Pattern Matching for <code>switch</code> (Newer Java Versions)</h3>
+                            <h5>3. Pattern Matching for <code>switch</code> (Newer Java Versions)</h5>
                             <p>
                                 Enhanced <code>switch</code> expressions and pattern matching introduce variables bound
                                 in
@@ -1951,7 +1928,7 @@ if (obj instanceof String s) { // s is a pattern variable
                                 typed.
                             </p>
 
-                            <h2>Best Practices for Variables in Java</h2>
+                            <h4>Best Practices for Variables in Java</h4>
                             <ul>
                                 <li>Use <strong>meaningful names</strong> that clearly describe the purpose of the
                                     variable.</li>
@@ -1969,7 +1946,7 @@ if (obj instanceof String s) { // s is a pattern variable
 
 
 
-                            <h2>Summary</h2>
+                            <h4>Summary</h4>
                             <p>
                                 Variables in Java are fundamental building blocks that represent named storage locations
                                 associated with types.
@@ -1984,7 +1961,7 @@ if (obj instanceof String s) { // s is a pattern variable
                             </p>
 
 
-                            <h2>Type Casting in Java</h2>
+                            <h4>Type Casting in Java</h4>
 
                             <p>
                                 <strong>Type casting</strong> in Java means converting a value of one data type into
@@ -1998,7 +1975,7 @@ if (obj instanceof String s) { // s is a pattern variable
                                     hierarchy)</li>
                             </ul>
 
-                            <h3>1. Primitive Type Casting</h3>
+                            <h5>1. Primitive Type Casting</h5>
 
                             <h6>1.1 Widening Casting (Automatic / Implicit)</h6>
                             <p>
@@ -2123,697 +2100,20 @@ int x = (int) d;  // cast only here
                             <h2>4. Quick Cheat Sheet</h2>
                             <ul>
                                 <li><strong>Primitive widening</strong> – automatic:
-                                    <code>int i = 10; double d = i;</code>
-                                </li>
+                                    <code>int i = 10; double d = i;</code></li>
                                 <li><strong>Primitive narrowing</strong> – need cast:
-                                    <code>double d = 9.8; int i = (int) d;</code>
-                                </li>
+                                    <code>double d = 9.8; int i = (int) d;</code></li>
                                 <li><strong>Upcasting (child → parent)</strong> – automatic:
-                                    <code>Animal a = new Dog();</code>
-                                </li>
+                                    <code>Animal a = new Dog();</code></li>
                                 <li><strong>Downcasting (parent → child)</strong> – explicit:
-                                    <code>Dog d = (Dog) a;</code>
-                                </li>
+                                    <code>Dog d = (Dog) a;</code></li>
                                 <li><strong>Strings to numbers</strong> – use <code>parseInt</code>,
-                                    <code>parseDouble</code>, etc., not casting.
-                                </li>
+                                    <code>parseDouble</code>, etc., not casting.</li>
                                 <li>Use <code>instanceof</code> to check before downcasting to avoid
-                                    <code>ClassCastException</code>.
-                                </li>
+                                    <code>ClassCastException</code>.</li>
                             </ul>
                         </article>
                     </section>
-
-                    <!-- Control Flow Section - inserted -->
-                    <section class="docs-section" id="item-1-6">
-                        <h1 class="docs-heading">Control Flow in Programming</h1>
-                        <article>
-                            <p>
-                                Control flow is the order in which individual statements, instructions, or function
-                                calls
-                                are executed or evaluated in a program. By default, code runs from top to bottom, but
-                                control-flow constructs (like <strong>if</strong>, <strong>loops</strong>, and
-                                <strong>switch</strong>) let you change that order.
-                            </p>
-
-                            <h2>Table of Contents</h2>
-                            <ol>
-                                <li><a href="#core-concepts">Core Concepts</a></li>
-                                <li><a href="#if-statements">If Statements</a></li>
-                                <li><a href="#loops">Loops</a></li>
-                                <li><a href="#switch">Switch Statements</a></li>
-                                <li><a href="#exceptions">Exceptions (Error Handling)</a></li>
-                                <li><a href="#import-all">What Is “Import All”?</a></li>
-                            </ol>
-
-                            <section id="core-concepts">
-                                <h2>1. Core Concepts of Control Flow</h2>
-                                <p>Most programs execute in three basic ways:</p>
-                                <ul>
-                                    <li><strong>Sequential</strong> – instructions run one after another.</li>
-                                    <li><strong>Selection (branching)</strong> – choose different paths (e.g.,
-                                        <code>if</code>, <code>switch</code>).
-                                    </li>
-                                    <li><strong>Iteration (looping)</strong> – repeat blocks of code (e.g.,
-                                        <code>for</code>, <code>while</code>).
-                                    </li>
-                                </ul>
-
-                                <h3>Simple Example (Pseudo-Code)</h3>
-                                <pre><code>// Pseudo-code example of basic control flow
-
-read age
-
-if (age &gt;= 18) {
-    print("You are an adult");
-} else {
-    print("You are not an adult");
-}
-
-for (i = 0; i &lt; 3; i = i + 1) {
-    print("Loop iteration: " + i);
-}</code></pre>
-                            </section>
-
-                            <section id="if-statements">
-                                <h2>2. If Statements (Selection)</h2>
-                                <p>
-                                    <strong>If statements</strong> allow your program to make decisions. A condition is
-                                    evaluated, and
-                                    if it is true, a block of code is executed; otherwise, it is skipped or an
-                                    alternative block is run.
-                                </p>
-
-                                <h3>Basic Syntax (C / Java / JavaScript Style)</h3>
-                                <pre><code>if (condition) {
-    // code that runs when condition is true
-} else {
-    // code that runs when condition is false
-}</code></pre>
-
-                                <h3>Else If Chains</h3>
-                                <pre><code>int score = 85;
-
-if (score &gt;= 90) {
-    printf("Grade: A\n");
-} else if (score &gt;= 80) {
-    printf("Grade: B\n");
-} else if (score &gt;= 70) {
-    printf("Grade: C\n");
-} else {
-    printf("Grade: F\n");
-}</code></pre>
-
-                                <h3>Common Pitfalls / “Exceptions” in Behavior</h3>
-                                <ul>
-                                    <li><strong>Assignment vs comparison:</strong> Using <code>=</code> instead of
-                                        <code>==</code> in some languages can cause bugs.
-                                    </li>
-                                    <li><strong>Truthiness:</strong> In some languages, non-boolean values (like 0,
-                                        empty strings, null) are treated as false.</li>
-                                    <li><strong>Missing braces:</strong> Omitting <code>{ }</code> can make only one
-                                        line part of the <code>if</code>, not the whole block you intended.</li>
-                                </ul>
-                            </section>
-
-                            <section id="loops">
-                                <h2>3. Loops (Iteration)</h2>
-                                <p>
-                                    <strong>Loops</strong> allow you to repeat a block of code multiple times. They are
-                                    essential for
-                                    tasks like processing lists, counting, and waiting for a condition to change.
-                                </p>
-
-                                <h3>3.1 For Loop</h3>
-                                <p>A <strong>for loop</strong> is used when you know (or can calculate) how many times
-                                    you want to repeat.</p>
-                                <pre><code>// C / Java / JavaScript style for loop
-for (int i = 0; i &lt; 5; i++) {
-    printf("i = %d\n", i);
-}</code></pre>
-
-                                <h3>Key Parts of a For Loop</h3>
-                                <ul>
-                                    <li><strong>Initialization</strong> – run once before the loop starts (e.g.,
-                                        <code>int i = 0</code>).
-                                    </li>
-                                    <li><strong>Condition</strong> – checked before each iteration (e.g.,
-                                        <code>i &lt; 5</code>).
-                                    </li>
-                                    <li><strong>Update</strong> – executed after each iteration (e.g.,
-                                        <code>i++</code>).
-                                    </li>
-                                </ul>
-
-                                <h3>3.2 While Loop</h3>
-                                <pre><code>int count = 0;
-
-while (count &lt; 3) {
-    printf("count = %d\n", count);
-    count++;
-}</code></pre>
-
-                                <h3>3.3 Do-While Loop</h3>
-                                <pre><code>int x = 0;
-
-do {
-    printf("x = %d\n", x);
-    x++;
-} while (x &lt; 3);</code></pre>
-
-                                <h3>Breaking and Skipping in Loops</h3>
-                                <ul>
-                                    <li><strong>break</strong> – exit the loop immediately.</li>
-                                    <li><strong>continue</strong> – skip to the next iteration of the loop.</li>
-                                </ul>
-
-                                <pre><code>for (int i = 0; i &lt; 10; i++) {
-    if (i == 3) {
-        continue;   // skip when i is 3
-    }
-    if (i == 8) {
-        break;      // stop the loop entirely
-    }
-    printf("i = %d\n", i);
-}</code></pre>
-
-                                <h3>Common Loop “Exceptions” and Pitfalls</h3>
-                                <ul>
-                                    <li><strong>Infinite loops:</strong> If the condition never becomes false, the loop
-                                        never ends.</li>
-                                    <li><strong>Off-by-one errors:</strong> Using <code>&lt;=</code> instead of
-                                        <code>&lt;</code> (or vice versa) can loop one time too many or too few.
-                                    </li>
-                                    <li><strong>Modifying the loop variable incorrectly:</strong> Skipping values or
-                                        causing unexpected behavior.</li>
-                                </ul>
-                            </section>
-
-                            <section id="switch">
-                                <h2>4. Switch Statements</h2>
-                                <p>
-                                    A <strong>switch statement</strong> lets you compare a single value against many
-                                    possible cases.
-                                    It can be cleaner than a long chain of <code>if / else if / else</code>.
-                                </p>
-
-                                <h3>Basic Syntax</h3>
-                                <pre><code>int day = 3;
-
-switch (day) {
-    case 1:
-        printf("Monday\n");
-        break;
-    case 2:
-        printf("Tuesday\n");
-        break;
-    case 3:
-        printf("Wednesday\n");
-        break;
-    default:
-        printf("Unknown day\n");
-        break;
-}</code></pre>
-
-                                <h3>Important Concepts</h3>
-                                <ul>
-                                    <li><strong>case label:</strong> A specific value to match against (e.g.,
-                                        <code>case 1:</code>).
-                                    </li>
-                                    <li><strong>break:</strong> Prevents “fall-through” to the next case.</li>
-                                    <li><strong>default:</strong> Code that runs if no case matches.</li>
-                                </ul>
-
-                                <h3>Fall-Through Behavior</h3>
-                                <p>
-                                    In many languages (like C, C++, Java, JavaScript), if you omit <code>break</code>,
-                                    execution continues into the next case. This can be useful but also a common source
-                                    of bugs.
-                                </p>
-                            </section>
-
-                            <section id="exceptions">
-                                <h2>5. Exceptions (Error Handling Control Flow)</h2>
-                                <p>
-                                    <strong>Exceptions</strong> are an additional type of control flow used for handling
-                                    errors or
-                                    unusual situations. Instead of returning error codes, an exception can be “thrown”
-                                    and then
-                                    “caught” by a special block of code.
-                                </p>
-
-                                <h3>Basic Example (Java-like Syntax)</h3>
-                                <pre><code>try {
-    int result = 10 / 0; // this will cause an error (division by zero)
-    System.out.println("Result: " + result);
-} catch (ArithmeticException e) {
-    System.out.println("Error: " + e.getMessage());
-} finally {
-    System.out.println("This always runs (cleanup, closing files, etc.)");
-}</code></pre>
-                            </section>
-
-                            <section id="import-all">
-                                <h2>6. What Is “Import All”?</h2>
-                                <p>
-                                    <strong>“Import all”</strong> usually refers to importing everything (all functions,
-                                    classes, variables)
-                                    from a module or package into the current scope. This is more about <strong>module
-                                        organization</strong>
-                                    than control flow itself, but it influences how code is accessed and executed.
-                                </p>
-
-                                <h3>Examples in Different Languages</h3>
-                                <h3>Python</h3>
-                                <pre><code># Import everything from the math module into the current namespace
-from math import *
-
-print(sqrt(16))  # sqrt is available directly</code></pre>
-
-                                <h3>JavaScript (ES Modules)</h3>
-                                <pre><code>// Import everything from 'utils.js' as an object called utils
-import * as utils from './utils.js';
-
-console.log(utils.add(2, 3));</code></pre>
-
-                                <h3>Java</h3>
-                                <pre><code>// Import all classes from java.util package
-import java.util.*;
-
-public class Example {
-    public static void main(String[] args) {
-        ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
-    }
-}</code></pre>
-
-                                <h3>Pros and Cons of Import All</h3>
-                                <h3>Pros</h3>
-                                <ul>
-                                    <li>Convenient: You do not need to list every single item you use.</li>
-                                    <li>Shorter code in small scripts or quick experiments.</li>
-                                </ul>
-
-                                <h3>Cons</h3>
-                                <ul>
-                                    <li><strong>Name conflicts:</strong> If two modules define the same name, “import
-                                        all” can cause collisions.</li>
-                                    <li><strong>Less readable:</strong> It becomes harder to see where a function or
-                                        class comes from.</li>
-                                    <li><strong>Potential performance or bundle-size issues:</strong> In some
-                                        environments, importing everything may load more code than necessary.</li>
-                                </ul>
-
-                                <p><strong>Best Practice:</strong> Import only what you need, or import using a
-                                    namespace (like <code>import * as utils</code>), to keep code clear and
-                                    maintainable.</p>
-                            </section>
-
-                            <footer>
-                                <hr>
-                                <p>
-                                    Summary: Control flow constructs like <strong>if</strong>, <strong>loops</strong>,
-                                    and
-                                    <strong>switch</strong> determine how your program moves from one instruction to the
-                                    next.
-                                    Exceptions provide a way to handle errors gracefully, and “import all” affects how
-                                    you organize
-                                    and access code across modules.
-                                </p>
-                            </footer>
-                        </article>
-                    </section>
-                    <!--//Control Flow Section-->
-
-                    <!-- Debugging Section - inserted -->
-                    <section class="docs-section" id="item-1-7">
-
-                        <h1 class="docs-heading">Debugging Basics (Using IntelliJ IDEA)</h1>
-                        <p>
-                            Debugging is the process of finding and fixing errors (bugs) in your code.
-                            IntelliJ IDEA provides a powerful debugger that lets you pause your program,
-                            inspect variables, run code step-by-step, and understand exactly what is happening.
-                        </p>
-                        </header>
-
-                        <nav>
-                            <h2>Table of Contents</h2>
-                            <ol>
-                                <li><a href="#core-concepts">Core Debugging Concepts</a></li>
-                                <li><a href="#setup-run-config">Setting Up &amp; Running in Debug Mode</a></li>
-                                <li><a href="#breakpoints">Breakpoints</a></li>
-                                <li><a href="#debug-controls">Debug Controls (Step Over, Into, Out)</a></li>
-                                <li><a href="#inspecting-state">Inspecting Variables &amp; Expressions</a></li>
-                                <li><a href="#conditional-log-breakpoints">Conditional &amp; Log Breakpoints</a></li>
-                                <li><a href="#debugging-exceptions">Debugging Exceptions</a></li>
-                                <li><a href="#example-workflow">Example Debugging Workflow</a></li>
-                                <li><a href="#tips-mistakes">Tips &amp; Common Mistakes</a></li>
-                            </ol>
-                        </nav>
-
-                        <!-- Core Concepts -->
-                        <section id="core-concepts">
-                            <h2>1. Core Debugging Concepts</h2>
-                            <p>Important terms you will see when debugging:</p>
-                            <ul>
-                                <li><strong>Breakpoint</strong> – a marker in your code where the debugger will pause
-                                    execution.</li>
-                                <li><strong>Call stack</strong> – the list of methods/functions that have been called to
-                                    reach the current point.</li>
-                                <li><strong>Step over</strong> – run the current line and go to the next one (skips
-                                    inside method bodies).</li>
-                                <li><strong>Step into</strong> – move into the method being called on the current line.
-                                </li>
-                                <li><strong>Step out</strong> – finish the current method and return to the caller.</li>
-                                <li><strong>Watch</strong> – a variable or expression that you keep an eye on while
-                                    debugging.</li>
-                                <li><strong>Evaluate expression</strong> – run small pieces of code during a pause to
-                                    inspect behavior.</li>
-                            </ul>
-                        </section>
-
-                        <!-- Setup & Run Config -->
-                        <section id="setup-run-config">
-                            <h2>2. Setting Up &amp; Running in Debug Mode (IntelliJ IDEA)</h2>
-                            <h3>2.1 Create a Run/Debug Configuration</h3>
-                            <ol>
-                                <li>At the top-right of IntelliJ, locate the run configuration dropdown.</li>
-                                <li>Click it and choose <strong>Edit Configurations...</strong>.</li>
-                                <li>
-                                    Create a new configuration (for example, <strong>Application</strong> for Java):
-                                    <ul>
-                                        <li>Set the <strong>Main class</strong> (the class with <code>main()</code>).
-                                        </li>
-                                        <li>Choose the correct <strong>Module</strong> or classpath.</li>
-                                    </ul>
-                                </li>
-                                <li>Click <strong>Apply</strong> and <strong>OK</strong>.</li>
-                            </ol>
-
-                            <h3>2.2 Run in Debug Mode</h3>
-                            <p>There are two main ways to start debugging:</p>
-                            <ul>
-                                <li>
-                                    Use the <strong>bug icon</strong> next to the run configuration (top-right).
-                                    This starts your program in debug mode.
-                                </li>
-                                <li>
-                                    Right-click a file (like your main class) in the Project view and choose
-                                    <strong>Debug '&lt;ClassName&gt;'</strong>.
-                                </li>
-                            </ul>
-
-                            <p>
-                                When your program hits a breakpoint, IntelliJ will open the <strong>Debug tool
-                                    window</strong> at the bottom,
-                                and execution will pause.
-                            </p>
-                        </section>
-
-                        <!-- Breakpoints -->
-                        <section id="breakpoints">
-                            <h2>3. Breakpoints</h2>
-                            <p>
-                                Breakpoints are the primary tool for debugging: they tell the debugger where to pause so
-                                you can inspect what is happening.
-                            </p>
-
-                            <h3>3.1 Adding &amp; Removing Breakpoints</h3>
-                            <ol>
-                                <li>Open the file you want to debug.</li>
-                                <li>Click in the <strong>left gutter</strong> (the gray area to the left of the line
-                                    numbers) beside a line of code.</li>
-                                <li>A red dot appears: this is your breakpoint.</li>
-                                <li>Click the red dot again to remove the breakpoint.</li>
-                            </ol>
-
-                            <h3>3.2 Enabling / Disabling Breakpoints</h3>
-                            <ul>
-                                <li>Right-click the breakpoint and uncheck <strong>Enabled</strong> to temporarily
-                                    disable it.</li>
-                                <li>Disabled breakpoints turn into a hollow icon but are kept for later use.</li>
-                            </ul>
-
-                            <h3>3.3 Viewing All Breakpoints</h3>
-                            <p>
-                                Press <strong>Ctrl+Shift+F8</strong> (or use the menu <strong>Run &gt; View
-                                    Breakpoints...</strong>)
-                                to see and manage all breakpoints in your project.
-                            </p>
-                        </section>
-
-                        <!-- Debug Controls -->
-                        <section id="debug-controls">
-                            <h2>4. Debug Controls (Step Over, Step Into, Step Out)</h2>
-                            <p>
-                                When your program pauses at a breakpoint, you control the flow using the toolbar in the
-                                Debug window.
-                                The icons and names may vary slightly, but the main actions are:
-                            </p>
-
-                            <ul>
-                                <li><strong>Resume Program</strong> – continue running until the next breakpoint or
-                                    program end.</li>
-                                <li><strong>Step Over</strong> – execute the current line, but do not go inside methods;
-                                    move to the next line in the same method.</li>
-                                <li><strong>Step Into</strong> – if the current line calls a method, jump inside that
-                                    method and pause at its first line.</li>
-                                <li><strong>Step Out</strong> – finish the current method and return to the caller.</li>
-                                <li><strong>Stop</strong> – end the debugging session.</li>
-                            </ul>
-
-                            <h3>4.1 When to Use Each</h3>
-                            <ul>
-                                <li>
-                                    Use <strong>Step Over</strong> when you trust a method and just want to see its
-                                    effect, not its internal details.
-                                </li>
-                                <li>
-                                    Use <strong>Step Into</strong> when you suspect the bug is inside the method being
-                                    called.
-                                </li>
-                                <li>
-                                    Use <strong>Step Out</strong> when you realize you went too deep and want to go back
-                                    to the higher-level code.
-                                </li>
-                            </ul>
-                        </section>
-
-                        <!-- Inspecting State -->
-                        <section id="inspecting-state">
-                            <h2>5. Inspecting Variables &amp; Expressions</h2>
-                            <p>
-                                The main power of debugging is seeing the state of your program while it runs.
-                                IntelliJ gives you several ways to inspect data when execution is paused.
-                            </p>
-
-                            <h3>5.1 Variables View</h3>
-                            <ul>
-                                <li>
-                                    In the Debug tool window, there is a <strong>Variables</strong> (or similar) pane
-                                    that shows all local variables.
-                                </li>
-                                <li>
-                                    Expand objects (using the small triangle) to see their fields.
-                                </li>
-                                <li>
-                                    Collections and arrays can be expanded to see their elements.
-                                </li>
-                            </ul>
-
-                            <h3>5.2 Hover Inspection</h3>
-                            <p>
-                                Move your mouse over a variable in the editor while in debug mode.
-                                IntelliJ displays a pop-up with the current value of that variable.
-                            </p>
-
-                            <h3>5.3 Watches</h3>
-                            <p>
-                                Use <strong>Watches</strong> when you want to track specific expressions or variables:
-                            </p>
-                            <ol>
-                                <li>Open the <strong>Watches</strong> tab/panel in the Debug window.</li>
-                                <li>Click the <strong>+</strong> icon to add a new watch.</li>
-                                <li>Type an expression (e.g., <code>myList.size()</code> or
-                                    <code>user.getName()</code>).
-                                </li>
-                                <li>Now IntelliJ will always show the current value whenever execution is paused.</li>
-                            </ol>
-
-                            <h3>5.4 Evaluate Expression</h3>
-                            <p>
-                                <strong>Evaluate Expression</strong> lets you execute code while paused to test logic or
-                                inspect state:
-                            </p>
-                            <ol>
-                                <li>When paused at a breakpoint, click the <strong>Evaluate Expression</strong> button
-                                    in the Debug window (often a calculator icon).</li>
-                                <li>Type any valid expression that can be compiled in the current context.</li>
-                                <li>Press <strong>Evaluate</strong> to view the result.</li>
-                            </ol>
-                            <p>
-                                This is very useful for quickly checking conditions, method results, or exploring new
-                                code without changing your source files.
-                            </p>
-                        </section>
-
-                        <!-- Conditional & Log Breakpoints -->
-                        <section id="conditional-log-breakpoints">
-                            <h2>6. Conditional &amp; Log Breakpoints</h2>
-                            <p>
-                                Sometimes you only want to pause or log output when a certain condition is met.
-                                IntelliJ supports <strong>conditional breakpoints</strong> and <strong>log
-                                    breakpoints</strong>.
-                            </p>
-
-                            <h3>6.1 Conditional Breakpoints</h3>
-                            <ol>
-                                <li>Right-click an existing breakpoint (red dot in the gutter).</li>
-                                <li>In the popup, find the <strong>Condition</strong> field.</li>
-                                <li>Enter an expression that returns a boolean (e.g., <code>i == 10</code> or
-                                    <code>user == null</code>).
-                                </li>
-                                <li>Now the program will only pause at this breakpoint when the condition is
-                                    <strong>true</strong>.
-                                </li>
-                            </ol>
-
-                            <h3>6.2 Log Breakpoints (Without Stopping)</h3>
-                            <ol>
-                                <li>Right-click a breakpoint.</li>
-                                <li>Check options like <strong>Log message to console</strong> or <strong>Evaluate and
-                                        log</strong>.</li>
-                                <li>Uncheck <strong>Suspend</strong> if you do not want the program to pause.</li>
-                                <li>
-                                    Your program will continue to run, but IntelliJ will print debug messages to the
-                                    console,
-                                    which is useful for tracing execution without stopping.
-                                </li>
-                            </ol>
-                        </section>
-
-                        <!-- Debugging Exceptions -->
-                        <section id="debugging-exceptions">
-                            <h2>7. Debugging Exceptions</h2>
-                            <p>
-                                Exceptions often indicate bugs or unexpected situations. IntelliJ can help you
-                                understand where and why an exception occurred.
-                            </p>
-
-                            <h3>7.1 When an Exception Occurs</h3>
-                            <ul>
-                                <li>If an uncaught exception is thrown, the debugger will pause at the line where it
-                                    happened (if you are in debug mode).</li>
-                                <li>The <strong>Frames</strong> or <strong>Call Stack</strong> tab will show you the
-                                    chain of method calls that led to the error.</li>
-                                <li>The <strong>Variables</strong> tab will show you the values of variables at the
-                                    moment of failure.</li>
-                            </ul>
-
-                            <h3>7.2 Exception Breakpoints</h3>
-                            <ol>
-                                <li>Open the <strong>View Breakpoints...</strong> dialog (e.g.,
-                                    <strong>Ctrl+Shift+F8</strong>).
-                                </li>
-                                <li>Click the <strong>+</strong> icon and choose <strong>Java Exception
-                                        Breakpoint</strong> (or similar, depending on language).</li>
-                                <li>Select an exception class (e.g., <code>NullPointerException</code>,
-                                    <code>IOException</code>).
-                                </li>
-                                <li>
-                                    IntelliJ will now pause whenever that exception is thrown, even if it is later
-                                    caught,
-                                    so you can see exactly where it originates.
-                                </li>
-                            </ol>
-                        </section>
-
-                        <!-- Example Debugging Workflow -->
-                        <section id="example-workflow">
-                            <h2>8. Example Debugging Workflow</h2>
-                            <p>Here is a simple example using Java, but the general idea is similar for other languages.
-                            </p>
-
-                            <h3>8.1 Sample Code</h3>
-                            <pre><code>public class DebugExample {
-    public static void main(String[] args) {
-        int[] numbers = {1, 2, 3};
-        int index = 0;
-
-        while (index &lt;= numbers.length) { // bug: should be &lt; instead of &lt;=
-            int value = numbers[index];
-            System.out.println("Value: " + value);
-            index++;
-        }
-    }
-}</code></pre>
-
-                            <h3>8.2 Steps to Debug in IntelliJ IDEA</h3>
-                            <ol>
-                                <li>Set a breakpoint on the line <code>int value = numbers[index];</code>.</li>
-                                <li>Start the program in <strong>Debug</strong> mode.</li>
-                                <li>When execution pauses at the breakpoint:
-                                    <ul>
-                                        <li>Check <strong>index</strong> and <strong>numbers.length</strong> in the
-                                            Variables window.</li>
-                                        <li>Use <strong>Step Over</strong> to go through the loop iterations.</li>
-                                        <li>Watch how <strong>index</strong> changes on each iteration.</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    When <strong>index</strong> becomes equal to <strong>numbers.length</strong>, the
-                                    next iteration will cause an
-                                    <code>ArrayIndexOutOfBoundsException</code>. You will see the exception and the
-                                    incorrect condition:
-                                    <code>index &lt;= numbers.length</code>.
-                                </li>
-                                <li>Fix the bug by changing the condition to <code>index &lt; numbers.length</code>.
-                                </li>
-                                <li>Run the program again to confirm it works correctly.</li>
-                            </ol>
-                        </section>
-
-                        <!-- Tips & Common Mistakes -->
-                        <section id="tips-mistakes">
-                            <h2>9. Tips &amp; Common Mistakes in Debugging</h2>
-
-                            <h3>9.1 Tips</h3>
-                            <ul>
-                                <li>Start by reproducing the bug reliably (same inputs, same steps).</li>
-                                <li>Use breakpoints near where you suspect the problem is, not random places.</li>
-                                <li>Inspect actual values instead of guessing what they might be.</li>
-                                <li>Use <strong>Evaluate Expression</strong> to test hypotheses without editing code.
-                                </li>
-                                <li>
-                                    Use <strong>log breakpoints</strong> instead of adding and removing many temporary
-                                    <code>System.out.println()</code> or <code>console.log()</code> statements.
-                                </li>
-                            </ul>
-
-                            <h3>9.2 Common Mistakes</h3>
-                            <ul>
-                                <li>Forgetting to run in <strong>Debug</strong> mode (using Run instead of Debug).</li>
-                                <li>Placing breakpoints in code that never actually runs.</li>
-                                <li>Changing code but not rebuilding / rerunning before testing again.</li>
-                                <li>Ignoring the call stack, which often clearly shows where things went wrong.</li>
-                                <li>Assuming a variable has one value without checking it in the debugger.</li>
-                            </ul>
-
-                            <p>
-                                With practice, using IntelliJ IDEA's debugger will become a normal part of your
-                                development
-                                process, helping you understand your code more deeply and find bugs much faster.
-                            </p>
-                        </section>
-                        <hr>
-                        <p>
-                            Summary: Debugging with IntelliJ IDEA is about using breakpoints, stepping through code,
-                            inspecting variables, and understanding exceptions.
-                            Mastering these basics will make you much more efficient at tracking down and fixing
-                            bugs.
-                        </p>
-
-                    </section>
-                    <!--//Debugging Section-->
 
 
                     <!--//section-->
