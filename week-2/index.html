@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Java Documentation - Protik The DEV
+    </title>
+
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Java Documentation For Software Developers" />
+    <meta name="author" content="Protik The DEV" />
+    <link rel="shortcut icon" href="../favicon.png" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet" />
+
+    <!-- FontAwesome JS-->
+    <script defer src="../assets/fontawesome/js/all.min.js"></script>
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css" />
+    <link rel="stylesheet" href="../assets/plugins/simplelightbox/simple-lightbox.min.css" />
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="../assets/css/theme.css" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TCN8REREGW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-TCN8REREGW');
+    </script>
+</head>
+
+<body>
+
+    <header class="header fixed-top">
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+                    <button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
+                        type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="site-logo">
+                        <a class="navbar-brand" href="index.html"><img class="logo-icon me-2" src="../favicon.png"
+                                alt="logo" width="50px" /><span class="logo-text">Java <span
+                                    class="text-alt">Documentation</span></span></a>
+                    </div>
+                </div>
+                <!--//docs-logo-wrapper-->
+                <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+                    <!-- Include Lunr.js -->
+                    <script src="https://unpkg.com/lunr/lunr.js"></script>
+                    <!-- Your search form -->
+                    <div class="top-search-box d-none d-lg-flex">
+                        <form class="search-form" id="searchForm">
+                            <input type="text" placeholder="Search the docs..." name="search"
+                                class="form-control search-input" id="searchInput" />
+                            <button type="submit" class="btn search-btn" value="Search">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+                        <li class="list-inline-item">
+                            <a href="https://github.com/protik-das-utso" target="_blank"><i
+                                    class="fa-brands fa-github fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://t.me/protikthedev" target="_blank"><i
+                                    class="fa-brands fa-telegram fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="http://facebook.com/protikthedeveloper" target="_blank"><i
+                                    class="fa-brands fa-facebook fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.youtube.com/@protikthedev" target="_blank"><i
+                                    class="fa-brands fa-youtube fa-fw"></i></a>
+                        </li>
+                    </ul>
+                    <!--//social-list-->
+                    <a href="https://t.me/protikthedev" target="_blank" class="btn btn-primary d-none d-lg-flex">Join
+                        Telegram</a>
+                </div>
+                <!--//docs-top-utilities-->
+            </div>
+            <!--//container-->
+        </div>
+        <!--//branding-->
+    </header>
+    <!--//header-->
+
+    <div class="docs-wrapper">
+
+        <div id="docs-sidebar" class="docs-sidebar">
+            <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+                    <input type="text" placeholder="Search the docs..." name="search"
+                        class="form-control search-input" />
+                    <button type="submit" class="btn search-btn" value="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <nav id="docs-nav" class="docs-nav navbar">
+                <ul class="section-items list-unstyled nav flex-column pb-3">
+                    <li class="nav-item section-title">
+                        <a class="nav-link" href="../week-1/"><span class="theme-icon-holder me-2"><i
+                                    class="fas fa-map-signs"></i></span>Week 1</a>
+                    </li>
+                    <li class="nav-item section-title mt-3">
+                        <a class="nav-link active" href="#week-2"><span class="theme-icon-holder me-2"><i
+                                    class="fas fa-arrow-down"></i></span>Week 2</a>
+                    </li>
+                   
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#item-2-2">Methods & Parameters</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#item-2-3">Return Types & Overloading</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#item-2-5">Exceptions & Methods</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#item-2-6">Core Method Concepts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#item-2-7">Advanced Method Topics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#item-2-8">Complete Example & Best Practices</a>
+                    </li>
+                </ul>
+            </nav>
+            <!--//docs-nav-->
+        </div>
+
+
+        <!--//docs-sidebar-->
+        <div class="docs-content">
+            <div class="container">
+                <article class="docs-article" id="week-2">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">Week 2 - Methods & Parameters</h1>
+                        <!-- Search Results -->
+                        <div id="searchResults"></div>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                if (typeof lunr === 'undefined') {
+                                    console.error('Lunr.js not found. Load https://unpkg.com/lunr/lunr.js before this script.');
+                                    return;
+                                }
+
+                                // ----------------------------
+                                // 1) Utilities
+                                // ----------------------------
+                                const scope = document.querySelector('.docs-content') || document;
+                                const isHeading = n => n && /^H[1-6]$/.test(n.tagName);
+                                const levelBoost = { H1: 12, H2: 8, H3: 5, H4: 3, H5: 2 };
+
+                                // Normalize for case/diacritics to keep searching standard & user-friendly
+                                const normalize = s =>
+                                    (s || '')
+                                        .normalize('NFKD')
+                                        .replace(/[\u0300-\u036f]/g, '')   // strip accents
+                                        .replace(/\s+/g, ' ')
+                                        .trim();
+
+                                function snippetFrom(el, limit = 260) {
+                                    let txt = '';
+                                    let n = el.nextElementSibling;
+                                    while (n && txt.length < limit) {
+                                        if (n.nodeType === 1) {
+                                            if (isHeading(n)) break;
+                                            txt += (n.textContent || '') + ' ';
+                                        }
+                                        n = n.nextElementSibling;
+                                    }
+                                    return txt.trim().substring(0, limit);
+                                }
+
+                                // ----------------------------
+                                // 2) Collect headings and build index
+                                // ----------------------------
+                                const headings = Array.from(scope.querySelectorAll('h1.docs-heading, h2, h3'));
+                                const docs = headings.map((h, i) => {
+                                    const id = h.id || `heading-${i}`;
+                                    if (!h.id) h.id = id;
+
+                                    const level = parseInt(h.tagName[1]);
+                                    const title = h.textContent || '';
+                                    const snippet = snippetFrom(h);
+
+                                    return {
+                                        id,
+                                        title: normalize(title),
+                                        snippet: normalize(snippet),
+                                        level,
+                                        element: h
+                                    };
+                                });
+
+                                if (docs.length === 0) {
+                                    console.warn('No h1.docs-heading, h2, or h3 found to index.');
+                                    return;
+                                }
+
+                                // Build Lunr index
+                                const idx = lunr(function () {
+                                    this.ref('id');
+                                    this.field('title', { boost: 10 });
+                                    this.field('snippet', { boost: 1 });
+                                    docs.forEach(doc => this.add(doc));
+                                });
+
+                                // ----------------------------
+                                // 3) Search functionality
+                                // ----------------------------
+                                function performSearch(query) {
+                                    if (!query.trim()) {
+                                        document.getElementById('searchResults').innerHTML = '';
+                                        return;
+                                    }
+
+                                    const results = idx.search(query);
+                                    const resultsContainer = document.getElementById('searchResults');
+
+                                    if (results.length === 0) {
+                                        resultsContainer.innerHTML = '<div class="alert alert-info">No results found.</div>';
+                                        return;
+                                    }
+
+                                    const html = results.slice(0, 10).map(result => {
+                                        const doc = docs.find(d => d.id === result.ref);
+                                        if (!doc) return '';
+
+                                        const boost = levelBoost[`H${doc.level}`] || 1;
+                                        const adjustedScore = (result.score * boost).toFixed(2);
+
+                                        return `
+                                            <div class="search-result" style="margin-bottom: 15px; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                                                <h5><a href="#${doc.id}" style="text-decoration: none;">${doc.element.textContent}</a></h5>
+                                                <p style="margin: 5px 0; color: #666; font-size: 0.9em;">${doc.snippet}</p>
+                                                <small style="color: #999;">Score: ${adjustedScore} | Level: H${doc.level}</small>
+                                            </div>
+                                        `;
+                                    }).join('');
+
+                                    resultsContainer.innerHTML = html;
+                                }
+
+                                // ----------------------------
+                                // 4) Attach to search inputs
+                                // ----------------------------
+                                const searchInputs = document.querySelectorAll('.search-input');
+                                searchInputs.forEach(input => {
+                                    input.addEventListener('input', e => performSearch(e.target.value));
+                                });
+
+                                console.log(`Lunr index built with ${docs.length} headings.`);
+                            });
+                        </script>
+                    </header>
+
+
+                    <!-- Methods Introduction -->
+                    <section class="docs-section" id="item-2-2">
+                        <h1 class="docs-heading">Methods &amp; Parameters in Java</h1>
+
+                        <p>
+                            A <strong>method</strong> in Java is a reusable block of code that performs a specific task.
+                            Methods help you organize logic, reduce duplication, and make your programs easier to read
+                            and maintain.
+                        </p>
+
+                        <h2>1. What Is a Method?</h2>
+                        <p>General syntax of a method:</p>
+
+                        <pre><code>[access_modifier] [other_modifiers] return_type methodName(parameter_list) throws ExceptionType {
+    // method body
+}</code></pre>
+
+                        <h3>1.1 Basic Example</h3>
+                        <p>
+                            This method takes two integers and returns their sum. It can be called multiple times with
+                            different values.
+                        </p>
+
+                        <pre><code>public int add(int a, int b) {
+    return a + b;
+}
+
+// Example usage:
+int result = add(5, 3);   // result = 8</code></pre>
+
+                        <!-- 2. PARAMETERS -->
+                        <h2>2. Parameters and Arguments</h2>
+
+                        <h3>2.1 Parameter vs Argument</h3>
+                        <ul>
+                            <li><strong>Parameter</strong> – the variable in the method definition.</li>
+                            <li><strong>Argument</strong> – the actual value passed when calling the method.</li>
+                        </ul>
+
+                        <pre><code>public void greet(String name) {   // 'name' is a parameter
+    System.out.println("Hello, " + name);
+}
+
+// Example usage:
+greet("Tech Tiger");                // "Tech Tiger" is an argument
+// Output: Hello, Tech Tiger</code></pre>
+
+                        <h3>2.2 Java Is Pass-by-Value (Very Important Concept)</h3>
+                        <p>
+                            Java is always <strong>pass-by-value</strong>. That means the method receives a
+                            <em>copy</em> of the value. For objects, the value being copied is a <em>reference</em> to
+                            the object.
+                        </p>
+
+                        <h4>2.2.1 Primitive Example (cannot change original)</h4>
+                        <pre><code>public static void changeValue(int x) {
+    x = 99;  // changes only the local copy
+}
+
+public static void main(String[] args) {
+    int a = 10;
+    changeValue(a);
+    System.out.println(a); // Output: 10 (still 10, not 99)
+}</code></pre>
+
+                        <p>
+                            The variable <code>a</code> in <code>main</code> does not change because the method received
+                            a copy of its value.
+                        </p>
+
+                        <h4>2.2.2 Reference Example (can change object state)</h4>
+                        <pre><code>class Person {
+    String name;
+}
+
+public static void rename(Person p) {
+    p.name = "New Name";   // changes the object referenced by p
+}
+
+public static void main(String[] args) {
+    Person person = new Person();
+    person.name = "Old Name";
+
+    rename(person);
+    System.out.println(person.name);  // Output: New Name
+}</code></pre>
+
+                        <p>
+                            Here the <strong>reference value</strong> is copied into the method, but both references
+                            point to the same object,
+                            so changing <code>p.name</code> affects <code>person.name</code>.
+                        </p>
+
+                        <h3>2.3 Varargs (<code>...</code>)</h3>
+                        <p>
+                            Varargs allow you to pass <strong>0 or more</strong> arguments of the same type to a method.
+                        </p>
+
+                        <pre><code>public static int sum(int... numbers) {
+    int total = 0;
+    for (int n : numbers) {
+        total += n;
+    }
+    return total;
+}
+
+public static void main(String[] args) {
+    System.out.println(sum());              // Output: 0  (no args)
+    System.out.println(sum(1, 2, 3));       // Output: 6
+    System.out.println(sum(10, 20, 30, 40));// Output: 100
+}</code></pre>
+
+                        <ul>
+                            <li>Only one vararg parameter is allowed per method.</li>
+                            <li>It must be the <strong>last</strong> parameter in the list.</li>
+                        </ul>
+
+                        <h3>2.4 <code>final</code> Parameters</h3>
+                        <p>
+                            Using <code>final</code> in parameters prevents reassigning the parameter variable inside
+                            the method.
+                            It does <strong>not</strong> make the object itself immutable.
+                        </p>
+
+                        <pre><code>public void process(final String input) {
+    // input = "something else"; // ❌ Compile-time error
+    System.out.println(input);
+}</code></pre>
+
+                    </section>
+                    <!--//section-->
+
+                    <!-- Return Types & Method Overloading -->
+                    <section class="docs-section" id="item-2-3">
+                        <h1 class="docs-heading">Return Types &amp; Method Overloading</h1>
+
+                        <h2>3. Return Types</h2>
+                        <p>
+                            Every non-<code>void</code> method must return a value that matches its declared return
+                            type.
+                        </p>
+
+                        <pre><code>public double divide(int a, int b) {
+    if (b == 0) {
+        throw new IllegalArgumentException("Divider cannot be zero");
+    }
+    return (double) a / b;
+}
+
+public void printHello() {          // returns nothing
+    System.out.println("Hello");
+}</code></pre>
+
+                        <p>
+                            If your method has a return type (like <code>int</code>, <code>double</code>, etc.),
+                            you <strong>must</strong> return a value on every execution path.
+                        </p>
+
+                        <!-- 4. METHOD OVERLOADING -->
+                        <h2>4. Method Overloading</h2>
+                        <p>
+                            <strong>Overloading</strong> means having multiple methods with the same name but different
+                            parameter lists
+                            (different number of parameters, types, or their order).
+                        </p>
+
+                        <pre><code>public int multiply(int a, int b) {
+    return a * b;
+}
+
+public double multiply(double a, double b) {
+    return a * b;
+}
+
+public int multiply(int a, int b, int c) {
+    return a * b * c;
+}
+
+public static void main(String[] args) {
+    System.out.println(multiply(2, 3));        // Output: 6        (int version)
+    System.out.println(multiply(2.5, 3.0));    // Output: 7.5      (double version)
+    System.out.println(multiply(2, 3, 4));     // Output: 24       (three-arg version)
+}</code></pre>
+
+                        <p>
+                            Java decides which overload to call at <strong>compile time</strong>, based on the argument
+                            types.
+                        </p>
+
+                    </section>
+                    <!--//section-->
+
+
+                    <!-- Exceptions and Methods -->
+                    <section class="docs-section" id="item-2-5">
+                        <h1 class="docs-heading">Exceptions and Methods</h1>
+
+                        <h2>5. Exceptions and Methods</h2>
+                        <p>
+                            Methods can signal error conditions using <strong>exceptions</strong>. They can either
+                            handle exceptions internally (with
+                            <code>try-catch</code>) or declare that they throw them using the <code>throws</code>
+                            clause.
+                        </p>
+
+                        <h3>5.1 Declaring Exceptions with <code>throws</code></h3>
+                        <pre><code>import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public void readFile(String path) throws IOException {
+    Files.readAllLines(Paths.get(path));  // may throw IOException
+}
+
+public void doWork() {
+    try {
+        readFile("data.txt");
+        System.out.println("File read successfully.");
+    } catch (IOException e) {
+        System.out.println("Error reading file: " + e.getMessage());
+    }
+}</code></pre>
+
+                        <h3>5.2 Checked vs Unchecked Exceptions</h3>
+                        <ul>
+                            <li><strong>Checked exceptions</strong> (subclasses of <code>Exception</code> except
+                                <code>RuntimeException</code>) must be handled or declared.</li>
+                            <li><strong>Unchecked exceptions</strong> (subclasses of <code>RuntimeException</code>) do
+                                not need to be declared.</li>
+                        </ul>
+
+                        <pre><code>public int parse(String s) {
+    // NumberFormatException is an unchecked exception (RuntimeException)
+    return Integer.parseInt(s);
+}
+
+public static void main(String[] args) {
+    System.out.println(parse("123")); // OK
+    System.out.println(parse("abc")); // Throws NumberFormatException at runtime
+}</code></pre>
+
+                    </section>
+                    <!--//section-->
+
+                    <!-- Core Method Concepts -->
+                    <section class="docs-section" id="item-2-6">
+                        <h1 class="docs-heading">Core Method Concepts</h1>
+
+                        <h2>6. Core Method Concepts</h2>
+
+                        <h3>6.1 Static vs Instance Methods</h3>
+                        <p>
+                            <strong>Static methods</strong> belong to the class; <strong>instance methods</strong>
+                            belong to an object.
+                        </p>
+
+                        <pre><code>class MathUtil {
+
+    // Static method (no instance required)
+    public static int square(int x) {
+        return x * x;
+    }
+
+    // Instance method (needs an object)
+    public int triple(int x) {
+        return 3 * x;
+    }
+}
+
+public static void main(String[] args) {
+    // Call static method
+    System.out.println(MathUtil.square(4)); // Output: 16
+
+    // Call instance method
+    MathUtil util = new MathUtil();
+    System.out.println(util.triple(4));     // Output: 12
+}</code></pre>
+
+                        <h3>6.2 Scope and the Call Stack</h3>
+                        <p>
+                            Variables declared inside a method are <strong>local</strong> to that method and exist only
+                            while the method runs.
+                        </p>
+
+                        <pre><code>public void demo() {
+    int x = 10;            // local variable
+    System.out.println(x); // Output: 10
+} // x is destroyed after this method finishes</code></pre>
+
+                        <p>
+                            Each method call creates a new <strong>stack frame</strong>. Deep or infinite recursion can
+                            cause
+                            <code>StackOverflowError</code>.
+                        </p>
+
+                        <h3>6.3 Recursion Example</h3>
+                        <pre><code>public static int factorial(int n) {
+    if (n &lt; 0) {
+        throw new IllegalArgumentException("n must be &gt;= 0");
+    }
+    if (n == 0 || n == 1) {
+        return 1;               // base case
+    }
+    return n * factorial(n - 1);// recursive call
+}
+
+public static void main(String[] args) {
+    System.out.println(factorial(5)); // Output: 120
+}</code></pre>
+
+                    </section>
+                    <!--//section-->
+
+                    <!-- Advanced Method Topics -->
+                    <section class="docs-section" id="item-2-7">
+                        <h1 class="docs-heading">Advanced Method Topics</h1>
+
+                        <h2>7. Interesting &amp; Lesser-Known Topics</h2>
+
+                        <h3>7.1 Covariant Return Types</h3>
+                        <p>
+                            When overriding a method, the subclass can return a <strong>more specific</strong> type (a
+                            subtype of the original return type).
+                        </p>
+
+                        <pre><code>class Animal {}
+
+class Dog extends Animal {}
+
+class AnimalFactory {
+    Animal create() {
+        return new Animal();
+    }
+}
+
+class DogFactory extends AnimalFactory {
+    @Override
+    Dog create() {          // covariant return type (Dog is a subclass of Animal)
+        return new Dog();
+    }
+}</code></pre>
+
+                        <p>
+                            This allows code that uses <code>DogFactory</code> to directly get a <code>Dog</code>
+                            without casting.
+                        </p>
+
+                        <h3>7.2 Method References &amp; Lambdas</h3>
+                        <p>
+                            Methods can be treated like values using <strong>method references</strong>, often used with
+                            streams and collections.
+                        </p>
+
+                        <pre><code>import java.util.Arrays;
+import java.util.List;
+
+public class MethodRefDemo {
+
+    public static void printUpper(String s) {
+        System.out.println(s.toUpperCase());
+    }
+
+    public static void main(String[] args) {
+        List&lt;String&gt; names = Arrays.asList("java", "python", "kotlin");
+
+        // Using lambda
+        names.forEach(s -&gt; MethodRefDemo.printUpper(s));
+
+        // Using method reference
+        names.forEach(MethodRefDemo::printUpper);
+        // Output:
+        // JAVA
+        // PYTHON
+        // KOTLIN
+    }
+}</code></pre>
+
+                        <h3>7.3 Default Methods in Interfaces</h3>
+                        <p>
+                            Interfaces can have <strong>default method implementations</strong>, which helps add new
+                            behavior without breaking existing classes.
+                        </p>
+
+                        <pre><code>interface Logger {
+    default void log(String msg) {
+        System.out.println("[LOG] " + msg);
+    }
+}
+
+class Service implements Logger {
+    public void doWork() {
+        log("Service started");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Service s = new Service();
+        s.doWork();  // Output: [LOG] Service started
+    }
+}</code></pre>
+
+                        <h3>7.4 Overloading with Varargs (Ambiguity)</h3>
+                        <p>
+                            Overloading and varargs can create confusing situations. The compiler picks the <strong>most
+                                specific</strong> method.
+                        </p>
+
+                        <pre><code>public void print(int x) {
+    System.out.println("int");
+}
+
+public void print(Integer... x) {
+    System.out.println("Integer varargs");
+}
+
+public static void main(String[] args) {
+    Example e = new Example();
+    e.print(5);  // Output: int  (primitive int is more specific)
+}</code></pre>
+
+                        <h3>7.5 Shadowing and Hiding</h3>
+                        <p>
+                            A parameter or local variable can <strong>shadow</strong> a field with the same name.
+                        </p>
+
+                        <pre><code>class Example {
+    int value = 10;
+
+    public void show(int value) {
+        System.out.println(value);      // parameter
+        System.out.println(this.value); // field
+    }
+}
+
+public static void main(String[] args) {
+    Example e = new Example();
+    e.show(5);
+    // Output:
+    // 5
+    // 10
+}</code></pre>
+
+                        <p>
+                            Static methods are <strong>hidden</strong>, not overridden:
+                        </p>
+
+                        <pre><code>class A {
+    static void hello() {
+        System.out.println("Hello from A");
+    }
+}
+
+class B extends A {
+    static void hello() {
+        System.out.println("Hello from B");
+    }
+}
+
+public static void main(String[] args) {
+    A a = new B();
+    a.hello(); // Output: Hello from A (decided by reference type A)
+}</code></pre>
+
+                        <h3>7.6 Reflection: Calling Methods Dynamically</h3>
+                        <p>
+                            Reflection lets you inspect and invoke methods at runtime, even if you didn't know them at
+                            compile time.
+                            This is used heavily in frameworks (e.g., Spring), but it can be slower and harder to debug.
+                        </p>
+
+                        <pre><code>import java.lang.reflect.Method;
+
+public class ReflectionDemo {
+    public void sayHi(String name) {
+        System.out.println("Hi, " + name);
+    }
+
+    public static void main(String[] args) throws Exception {
+        ReflectionDemo obj = new ReflectionDemo();
+
+        Class&lt;?&gt; clazz = obj.getClass();
+        Method m = clazz.getMethod("sayHi", String.class);
+
+        m.invoke(obj, "Tech Tiger"); // Output: Hi, Tech Tiger
+    }
+}</code></pre>
+
+                    </section>
+                    <!--//section-->
+
+                    <!-- Complete Example & Best Practices -->
+                    <section class="docs-section" id="item-2-8">
+                        <h1 class="docs-heading">Complete Example &amp; Best Practices</h1>
+
+                        <h2>8. Complete Example: Putting It All Together</h2>
+                        <p>
+                            This example combines several ideas: static methods, instance methods, parameters, return
+                            values, exceptions,
+                            and varargs.
+                        </p>
+
+                        <pre><code>public class MethodDocDemo {
+
+    // Static utility method with exception
+    public static double safeDivide(int a, int b) {
+        if (b == 0) {
+            throw new IllegalArgumentException("Divider cannot be zero");
+        }
+        return (double) a / b;
+    }
+
+    // Overloaded method with varargs
+    public static int sum(int... values) {
+        int total = 0;
+        for (int v : values) {
+            total += v;
+        }
+        return total;
+    }
+
+    // Instance method using recursion
+    public int factorial(int n) {
+        if (n &lt; 0) {
+            throw new IllegalArgumentException("n must be &gt;= 0");
+        }
+        if (n == 0 || n == 1) {
+            return 1;
+        }
+        return n * factorial(n - 1);
+    }
+
+    public static void main(String[] args) {
+        // Using static method
+        System.out.println("10 / 2 = " + safeDivide(10, 2)); // Output: 10 / 2 = 5.0
+
+        // Using varargs method
+        System.out.println("Sum = " + sum(1, 2, 3, 4, 5));   // Output: Sum = 15
+
+        // Using instance method
+        MethodDocDemo demo = new MethodDocDemo();
+        System.out.println("Factorial(5) = " + demo.factorial(5)); // Output: 120
+    }
+}</code></pre>
+
+                        <h2>Best Practices for Methods</h2>
+                        <ul>
+                            <li>Use descriptive method names that clearly indicate what the method does</li>
+                            <li>Keep methods focused on a single task (Single Responsibility Principle)</li>
+                            <li>Avoid too many parameters - consider using objects or builder patterns</li>
+                            <li>Handle exceptions appropriately - use checked exceptions for recoverable errors</li>
+                            <li>Document complex methods with JavaDoc comments</li>
+                            <li>Make methods as simple and readable as possible</li>
+                            <li>Use static methods for utility functions that don't depend on instance state</li>
+                        </ul>
+                    </section>
+                    <!--//section-->
+                </article>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <!-- Javascript -->
+    <script src="../assets/plugins/popper.min.js"></script>
+    <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Page Specific JS -->
+    <script src="../assets/plugins/smoothscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="../assets/js/highlight-custom.js"></script>
+    <script src="../assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
+    <script src="../assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+    <script src="../assets/js/docs.js"></script>
+
+</body>
+
+</html>
