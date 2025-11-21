@@ -122,7 +122,7 @@
                         <a class="nav-link active" href="#week-2"><span class="theme-icon-holder me-2"><i
                                     class="fas fa-arrow-down"></i></span>Week 2</a>
                     </li>
-                   
+
                     <li class="nav-item">
                         <a class="nav-link scrollto" href="#item-2-2">Methods & Parameters</a>
                     </li>
@@ -500,7 +500,8 @@ public void doWork() {
                         <h3>5.2 Checked vs Unchecked Exceptions</h3>
                         <ul>
                             <li><strong>Checked exceptions</strong> (subclasses of <code>Exception</code> except
-                                <code>RuntimeException</code>) must be handled or declared.</li>
+                                <code>RuntimeException</code>) must be handled or declared.
+                            </li>
                             <li><strong>Unchecked exceptions</strong> (subclasses of <code>RuntimeException</code>) do
                                 not need to be declared.</li>
                         </ul>
@@ -830,6 +831,289 @@ public class ReflectionDemo {
                             <li>Use static methods for utility functions that don't depend on instance state</li>
                         </ul>
                     </section>
+
+                    <!-- Arrays & String Manipulation  -->
+                    <section class="docs-section" id="item-2-9">
+                        <h1 class="docs-heading">Arrays & String Manipulation in Java</h1>
+
+                        <h2>1. Arrays in Java</h2>
+                        <p>
+                            Arrays are one of the fundamental data structures in Java. They allow you to store multiple
+                            values of the same data type under one variable name.
+                            Arrays are fast, memory-efficient, and ideal when the number of elements is known
+                            beforehand.
+                            However, arrays are also fixed in size, meaning once you create them, you cannot increase or
+                            decrease their length.
+                        </p>
+
+                        <h3>1.1 What is an Array?</h3>
+                        <p>
+                            An array is a sequence of values stored in contiguous memory locations. Each element can be
+                            accessed using an index, starting from 0.
+                            Arrays store elements of a single data type, such as integers, strings, or objects. Because
+                            of their predictable structure,
+                            arrays offer very fast access time—accessing any element is always O(1).
+                        </p>
+                        <pre><code>int[] numbers = new int[5]; // creates an array with 5 integer slots</code></pre>
+
+                        <h3>1.2 Declaring and Initializing Arrays</h3>
+
+                        <h4>Declaration</h4>
+                        <p>
+                            Declaring an array only tells Java to expect an array variable—it does not create memory
+                            yet.
+                            Declaring does not allocate space until you use the <code>new</code> keyword or assign a
+                            literal array.
+                        </p>
+                        <pre><code>int[] arr;
+int arr2[]; // valid but less preferred</code></pre>
+
+                        <h4>Allocation</h4>
+                        <p>
+                            Allocation creates memory for a specific number of elements. The number you provide becomes
+                            the array’s final size.
+                        </p>
+                        <pre><code>arr = new int[3]; // array of size 3</code></pre>
+
+                        <h4>Declaration + Initialization</h4>
+                        <p>
+                            You can declare and populate an array in one step. This is common when you already know the
+                            values.
+                        </p>
+                        <pre><code>int[] nums = {10, 20, 30};
+String[] names = new String[] {"Alice", "Bob", "Charlie"};</code></pre>
+
+                        <h3>1.3 Accessing and Updating Elements</h3>
+                        <p>
+                            Elements are accessed by index. Trying to access an index that does not exist results in an
+                            exception.
+                            The <code>length</code> field provides the total number of array elements.
+                        </p>
+                        <pre><code>int[] nums = {10, 20, 30};
+int first = nums[0];   // 10
+nums[1] = 99;          // update second element
+int length = nums.length; // 3</code></pre>
+
+                        <h3>1.4 Iterating Over Arrays</h3>
+
+                        <h4>Classic for-loop</h4>
+                        <p>
+                            The traditional for-loop provides access to both the value and the index, which is helpful
+                            when you need to modify specific elements or use their positions.
+                        </p>
+                        <pre><code>for (int i = 0; i &lt; nums.length; i++) {
+    System.out.println("Index " + i + ": " + nums[i]);
+}</code></pre>
+
+                        <h4>Enhanced for-loop</h4>
+                        <p>
+                            Also known as the “for-each loop,” this version focuses only on values, making it ideal for
+                            reading array elements without caring about indexes.
+                        </p>
+                        <pre><code>for (int value : nums) {
+    System.out.println(value);
+}</code></pre>
+
+                        <h3>1.5 Multi-Dimensional Arrays</h3>
+                        <p>
+                            Java supports multi-dimensional arrays, which can be visualized as tables or grids. These
+                            arrays are actually arrays of arrays.
+                        </p>
+                        <pre><code>int[][] matrix = new int[2][3]; // 2 rows, 3 columns</code></pre>
+
+                        <h4>Jagged Arrays</h4>
+                        <p>
+                            Unlike some languages, Java allows different row lengths in multi-dimensional arrays. Such
+                            arrays are called jagged arrays.
+                            They give more flexibility and save memory if rows differ in size.
+                        </p>
+                        <pre><code>int[][] jagged = new int[3][];
+jagged[0] = new int[]{1, 2};
+jagged[1] = new int[]{3, 4, 5};
+jagged[2] = new int[]{6};</code></pre>
+
+                        <h3>1.6 Arrays Utility Class</h3>
+                        <p>
+                            The <code>java.util.Arrays</code> class provides powerful functions that save time and
+                            reduce complexity.
+                            These include sorting, searching, copying, filling, comparing, and converting arrays to
+                            String.
+                        </p>
+                        <pre><code>Arrays.sort(nums); // ascending order
+Arrays.copyOf(nums, 3); // copy first 3 elements
+Arrays.fill(nums, 7); // fill array with value</code></pre>
+
+                        <h3>1.7 Common Array Exceptions</h3>
+
+                        <h4>ArrayIndexOutOfBoundsException</h4>
+                        <p>
+                            This occurs when you try to access an index outside valid boundaries (0 to length - 1).
+                            It is one of the most common beginner errors.
+                        </p>
+                        <pre><code>nums[3]; // invalid if array has only 3 elements</code></pre>
+
+                        <h4>NullPointerException</h4>
+                        <p>
+                            Happens when the array reference itself is null and you try to access properties or
+                            elements.
+                        </p>
+                        <pre><code>int[] a = null;
+a.length; // causes NPE</code></pre>
+
+                        <h3>1.8 Less-Known Facts about Arrays</h3>
+                        <ul>
+                            <li>Arrays are full-fledged objects in Java—even <code>int[]</code> extends
+                                <code>Object</code>.</li>
+                            <li>The <code>length</code> property of arrays is final, meaning array size cannot change
+                                once created.</li>
+                            <li>Java arrays are covariant, meaning <code>String[]</code> is a subtype of
+                                <code>Object[]</code>, but this can cause runtime errors.</li>
+                            <li>Arrays of reference types store <code>null</code> by default.</li>
+                        </ul>
+
+                        <h2>2. Strings in Java</h2>
+                        <p>
+                            Strings are one of the most used data types in Java. A String represents a sequence of
+                            characters,
+                            and Java treats Strings as immutable objects. This immutability is a core design principle
+                            that ensures security, thread safety, and optimization.
+                        </p>
+
+                        <h3>2.1 What is a String?</h3>
+                        <p>
+                            A String stores characters using UTF-16 encoding. Each character is stored in one or two
+                            bytes, depending on its Unicode value.
+                            Java stores String literals in a special area called the "String Pool" to reduce memory
+                            usage and avoid duplicate objects.
+                        </p>
+
+                        <h3>2.2 Creating Strings</h3>
+                        <p>
+                            Strings can be created as literals or using the <code>new</code> keyword.
+                            Literal Strings are stored in a shared pool, while <code>new String()</code> always creates
+                            a fresh object on the heap.
+                        </p>
+                        <pre><code>String s1 = "Hello"; // uses String Pool
+String s2 = new String("Hello"); // always new object</code></pre>
+
+                        <h3>2.3 Basic String Operations</h3>
+
+                        <h4>Concatenation</h4>
+                        <p>Combining multiple strings:</p>
+                        <pre><code>String c = "Hello" + " World";
+String d = "Hello".concat(" World");</code></pre>
+
+                        <h4>Length & Character Access</h4>
+                        <pre><code>String str = "Java";
+str.length(); // number of characters
+str.charAt(1); // returns 'a'</code></pre>
+
+                        <h4>Substring Extraction</h4>
+                        <p>Creates a new string from a portion of an existing one:</p>
+                        <pre><code>t.substring(0, 5);
+t.substring(6);</code></pre>
+
+                        <h4>Search Operations</h4>
+                        <p>Locate characters or sequences inside the string:</p>
+                        <pre><code>text.indexOf('a');
+text.lastIndexOf("desh");</code></pre>
+
+                        <h4>Replacing Text</h4>
+                        <pre><code>"banana".replace("na","NA");</code></pre>
+
+                        <h3>2.4 Comparing Strings</h3>
+
+                        <h4>equals() vs ==</h4>
+                        <p>
+                            <code>==</code> compares object references, not content.
+                            <code>equals()</code> compares character sequences.
+                        </p>
+
+                        <h4>Case-insensitive comparison</h4>
+                        <pre><code>a.equalsIgnoreCase(b);</code></pre>
+
+                        <h3>2.5 Useful String Methods</h3>
+                        <ul>
+                            <li><code>trim()</code> removes leading and trailing spaces.</li>
+                            <li><code>toUpperCase()</code> and <code>toLowerCase()</code></li>
+                            <li><code>startsWith()</code> and <code>endsWith()</code></li>
+                            <li><code>contains()</code> to check substring existence.</li>
+                            <li><code>split()</code> to convert text into array pieces.</li>
+                            <li><code>isEmpty()</code> to check if length == 0.</li>
+                        </ul>
+
+                        <h3>2.6 StringBuilder & StringBuffer</h3>
+                        <p>
+                            Since Strings are immutable, frequent modifications (like inside loops) create many
+                            unnecessary objects.
+                            <code>StringBuilder</code> and <code>StringBuffer</code> solve this by providing mutable
+                            character sequences.
+                        </p>
+
+                        <h4>StringBuilder (fast, not thread-safe)</h4>
+                        <pre><code>StringBuilder sb = new StringBuilder();
+sb.append("Hello").append(" World");</code></pre>
+
+                        <h4>StringBuffer (thread-safe)</h4>
+                        <pre><code>StringBuffer sbuf = new StringBuffer();
+sbuf.append("Safe Threads");</code></pre>
+
+                        <h3>2.7 Strings & Character Arrays</h3>
+                        <p>
+                            Converting to a char array is useful for low-level manipulation, like reversing strings or
+                            masking passwords.
+                        </p>
+                        <pre><code>char[] chars = "Hello".toCharArray();
+String rebuilt = new String(chars);</code></pre>
+
+                        <h3>2.8 Common String Exceptions</h3>
+
+                        <h4>StringIndexOutOfBoundsException</h4>
+                        <p>Occurs when accessing an invalid index:</p>
+                        <pre><code>"Java".charAt(4);</code></pre>
+
+                        <h4>NullPointerException</h4>
+                        <pre><code>String s = null;
+s.length();</code></pre>
+
+                        <h3>2.9 Less-Known String Facts</h3>
+                        <ul>
+                            <li>Strings are stored in the String Pool to save memory.</li>
+                            <li>Strings are immutable, which increases security and reduces bugs.</li>
+                            <li>Some characters require two <code>char</code> values due to UTF-16 surrogate pairs.</li>
+                            <li><code>intern()</code> allows manual control of the String Pool.</li>
+                        </ul>
+
+                        <h2>3. Arrays & Strings Together</h2>
+
+                        <h3>3.1 Splitting Strings into Arrays</h3>
+                        <p>Useful for reading CSV data, parsing input, etc.</p>
+                        <pre><code>String[] fruits = "apple,banana,orange".split(",");</code></pre>
+
+                        <h3>3.2 Joining Arrays into Strings</h3>
+                        <pre><code>String.join(" ", new String[]{"Java","is","fun"});</code></pre>
+
+                        <h3>3.3 Reversing a String using Arrays</h3>
+                        <pre><code>char[] c = "hello".toCharArray();
+// reverse logic
+String reversed = new String(c);</code></pre>
+
+                        <h2>4. Best Practices Summary</h2>
+                        <ul>
+                            <li>Use arrays when the size is fixed and performance is critical.</li>
+                            <li>Use ArrayList when size changes dynamically.</li>
+                            <li>Always use <code>equals()</code> (not <code>==</code>) for string comparison.</li>
+                            <li>Use StringBuilder for heavy string manipulation.</li>
+                            <li>Always check for null before using string methods.</li>
+                            <li>Prefer enhanced for-loop for readability.</li>
+                            <li>Use <code>Arrays.toString()</code> for printing arrays.</li>
+                        </ul>
+                    </section>
+
+
+
+
+
                     <!--//section-->
                 </article>
             </div>
