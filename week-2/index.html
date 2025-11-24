@@ -145,12 +145,22 @@
                     <li class="nav-item">
                         <a class="nav-link scrollto" href="#item-2-8">Complete Example & Best Practices</a>
                     </li>
-                     <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link scrollto" href="#item-2-9" b style="color: red;">Class 5 - Recording</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link scrollto" href="#item-2-10">Arrays & String Manipulation</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#item-2-11">Class</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#item-2-12">Objects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#item-2-13">Constructors</a>
+                    </li>
+
                 </ul>
             </nav>
             <!--//docs-nav-->
@@ -283,12 +293,11 @@
                         </script>
                     </header>
 
-                     <section class="docs-section" id="item-2-1">
+                    <section class="docs-section" id="item-2-1">
                         <h1 class="docs-heading">
                             Class 4 - Recording
                         </h1>
-                        <a href="https://www.youtube.com/watch?v=hisGrirLjc4" target="_blank"
-                            class="full-width-btn">
+                        <a href="https://www.youtube.com/watch?v=hisGrirLjc4" target="_blank" class="full-width-btn">
                             ▶ Watch Video
                         </a>
 
@@ -853,12 +862,11 @@ public class ReflectionDemo {
                         </ul>
                     </section>
 
-                     <section class="docs-section" id="item-2-9">
+                    <section class="docs-section" id="item-2-9">
                         <h1 class="docs-heading">
                             Class 5 - Recording
                         </h1>
-                        <a href="https://www.youtube.com/watch?v=IeLSvwjZSag" target="_blank"
-                            class="full-width-btn">
+                        <a href="https://www.youtube.com/watch?v=IeLSvwjZSag" target="_blank" class="full-width-btn">
                             ▶ Watch Video
                         </a>
 
@@ -995,11 +1003,13 @@ a.length; // causes NPE</code></pre>
                         <h3>1.8 Less-Known Facts about Arrays</h3>
                         <ul>
                             <li>Arrays are full-fledged objects in Java—even <code>int[]</code> extends
-                                <code>Object</code>.</li>
+                                <code>Object</code>.
+                            </li>
                             <li>The <code>length</code> property of arrays is final, meaning array size cannot change
                                 once created.</li>
                             <li>Java arrays are covariant, meaning <code>String[]</code> is a subtype of
-                                <code>Object[]</code>, but this can cause runtime errors.</li>
+                                <code>Object[]</code>, but this can cause runtime errors.
+                            </li>
                             <li>Arrays of reference types store <code>null</code> by default.</li>
                         </ul>
 
@@ -1140,6 +1150,669 @@ String reversed = new String(c);</code></pre>
                             <li>Prefer enhanced for-loop for readability.</li>
                             <li>Use <code>Arrays.toString()</code> for printing arrays.</li>
                         </ul>
+                    </section>
+
+                    <!-- Class  -->
+                    <section class="docs-section" id="item-2-11">
+
+                        <!-- ========================================================= -->
+                        <!-- ====================== CLASS SECTION ===================== -->
+                        <!-- ========================================================= -->
+
+                        <h1 class="docs-heading">Class in Java</h1>
+
+                        <h2>Definition</h2>
+                        <p>
+                            A <strong>class</strong> in Java is a <em>blueprint/template</em> used to create objects.
+                            It contains:
+                        </p>
+                        <ul>
+                            <li>Variables (fields)</li>
+                            <li>Methods (behaviors)</li>
+                            <li>Constructors</li>
+                            <li>Blocks</li>
+                            <li>Inner classes</li>
+                        </ul>
+
+                        <h2>Simple Class Example</h2>
+                        <pre><code class="language-java">
+class Car {
+    String brand;
+    int speed;
+
+    void run() {
+        System.out.println(brand + " is running at " + speed + " km/h");
+    }
+}
+</code></pre>
+
+                        <h3>Real World Explanation</h3>
+                        <p>
+                            The <strong>Car</strong> class is like a <strong>car blueprint</strong>.
+                            A blueprint is not a real car; it only describes what a car <em>should</em> have.
+                        </p>
+                        <ul>
+                            <li><strong>brand</strong> → like "Toyota", "BMW"</li>
+                            <li><strong>speed</strong> → how fast it can move</li>
+                            <li><strong>run()</strong> → behavior of the car</li>
+                        </ul>
+
+                        <hr>
+
+                        <h2>Types of Classes (All Types With Real-World Examples)</h2>
+
+                        <h3>1. Concrete (Regular) Class</h3>
+                        <pre><code class="language-java">
+class Employee {
+    String name;
+    int id;
+}
+</code></pre>
+                        <p><strong>Real World:</strong> A form used to create real employees.</p>
+
+                        <h3>2. Abstract Class</h3>
+                        <pre><code class="language-java">
+abstract class Animal {
+    abstract void sound();
+}
+</code></pre>
+                        <p><strong>Real World:</strong> All animals make sounds, but each type defines its own.</p>
+
+                        <h3>3. Final Class</h3>
+                        <pre><code class="language-java">
+final class Constants { }
+</code></pre>
+                        <p><strong>Real World:</strong> Sealed class — cannot be extended or modified.</p>
+
+                        <h3>4. Static Nested Class</h3>
+                        <pre><code class="language-java">
+class Car {
+    static class Engine {
+        void info() { System.out.println("Engine info"); }
+    }
+}
+</code></pre>
+                        <p><strong>Real World:</strong> Department inside a company that works independently.</p>
+
+                        <h3>5. Member Inner Class</h3>
+                        <pre><code class="language-java">
+class A {
+    class B {
+        void message() {
+            System.out.println("Inner class B");
+        }
+    }
+}
+</code></pre>
+
+                        <h3>6. Local Inner Class</h3>
+                        <pre><code class="language-java">
+class Shop {
+    void bill() {
+        class Item {
+            String name;
+        }
+    }
+}
+</code></pre>
+                        <p><strong>Real World:</strong> Temporary class used only while generating bill.</p>
+
+                        <h3>7. Anonymous Inner Class</h3>
+                        <pre><code class="language-java">
+Runnable r = new Runnable() {
+    public void run() {
+        System.out.println("Running task");
+    }
+};
+</code></pre>
+                        <p><strong>Real World:</strong> A temporary worker hired for only one job.</p>
+
+                        <h3>8. Enum Class</h3>
+                        <pre><code class="language-java">
+enum Direction { NORTH, SOUTH, EAST, WEST }
+</code></pre>
+
+                        <h3>9. POJO Class</h3>
+                        <pre><code class="language-java">
+class Student {
+    private String name;
+    private int age;
+}
+</code></pre>
+
+                        <h3>10. Immutable Class</h3>
+                        <pre><code class="language-java">
+final class User {
+    private final String username;
+    User(String username) { this.username = username; }
+    public String getUsername() { return username; }
+}
+</code></pre>
+
+                        <h3>11. Singleton Class</h3>
+                        <pre><code class="language-java">
+class Singleton {
+    private static Singleton obj = new Singleton();
+    private Singleton() {}
+    public static Singleton getInstance() {
+        return obj;
+    }
+}
+</code></pre>
+
+                        <hr>
+
+                    </section>
+                    <!-- Object-->
+                    <section class="docs-section" id="item-2-12">
+                        <h1 class="docs-heading">Objects</h1>
+
+                        <h2>Definition</h2>
+                        <p>
+                            An <strong>object</strong> is a real instance of a class containing:
+                        </p>
+                        <ul>
+                            <li><strong>State</strong> (variables)</li>
+                            <li><strong>Behavior</strong> (methods)</li>
+                            <li><strong>Identity</strong> (memory address)</li>
+                        </ul>
+
+                        <h2>Creating Objects (All Ways)</h2>
+
+                        <h3>1. Using <code>new</code> keyword</h3>
+                        <pre><code class="language-java">
+Car c = new Car();
+</code></pre>
+
+                        <h3>2. Using Reflection</h3>
+                        <pre><code class="language-java">
+Car c = Car.class.newInstance();
+</code></pre>
+
+                        <h3>3. Using Constructor class</h3>
+                        <pre><code class="language-java">
+Constructor<Car> cons = Car.class.getConstructor();
+Car c = cons.newInstance();
+</code></pre>
+
+                        <h3>4. Using clone()</h3>
+                        <pre><code class="language-java">
+Car c2 = (Car)c1.clone();
+</code></pre>
+
+                        <h3>5. Using Deserialization</h3>
+                        <pre><code class="language-java">
+Car c = (Car)ois.readObject();
+</code></pre>
+
+                        <h3>6. Anonymous Object</h3>
+                        <pre><code class="language-java">
+new Car().run();
+</code></pre>
+
+                        <h2>Memory Diagram</h2>
+                        <pre>
+Stack: c → reference
+Heap: Object { brand="BMW", speed=180 }
+Method Area: Class Car loaded
+</pre>
+
+                        <hr>
+                    </section>
+                    <!-- Constructor-->
+                    <section class="docs-section" id="item-2-13">
+                        <h1 class="docs-heading">Constructors in Java</h1>
+
+                        <p>
+                            A <strong>constructor</strong> in Java is a special block of code used to initialize an
+                            object.
+                            It runs automatically when an object is created and prepares the object with initial values.
+                            It has the <strong>same name as the class</strong> and <strong>no return type</strong>.
+                        </p>
+
+                        <h2>Why Do We Need Constructors?</h2>
+                        <p>
+                            Constructors allow your object to start its life with proper and meaningful initial values.
+                            Without constructors:
+                        <ul>
+                            <li>Objects would start uninitialized</li>
+                            <li>We would do manual setup each time</li>
+                            <li>Code becomes repetitive and error-prone</li>
+                        </ul>
+                        </p>
+
+                        <hr>
+
+                        <h2>Rules of Constructors</h2>
+                        <ul>
+                            <li>Constructor name must be the same as class name</li>
+                            <li>No return type (not even <code>void</code>)</li>
+                            <li>Called automatically when object is created</li>
+                            <li>Cannot be <strong>static</strong>, <strong>final</strong>, or <strong>abstract</strong>
+                            </li>
+                            <li>Can be overloaded</li>
+                            <li><strong>super()</strong> must be the first statement in constructor</li>
+                            <li>If no constructor is written, JVM creates a <strong>default</strong> one</li>
+                        </ul>
+
+                        <hr>
+
+                        <h2>Types of Constructors (All Types with Deep Explanation)</h2>
+
+                        <!-- ========================================================= -->
+                        <!-- =============== 1. DEFAULT (JVM PROVIDED) =============== -->
+                        <!-- ========================================================= -->
+
+                        <h3>1. Default Constructor (JVM Provided)</h3>
+
+                        <p>
+                            If you do not write any constructor, Java automatically provides a <strong>default
+                                constructor</strong>
+                            that sets all fields to default values specific to data types.
+                        </p>
+
+                        <pre><code class="language-java">
+class Car {
+    int speed;      // default = 0
+    String brand;   // default = null
+    boolean on;     // default = false
+}
+</code></pre>
+
+                        <h3>Explanation</h3>
+                        <p>
+                            Here, Java silently adds:
+                        </p>
+
+                        <pre><code class="language-java">
+Car() {
+    super(); // call to Object class
+}
+</code></pre>
+
+                        <p>
+                            This constructor does nothing except calling parent class constructor.
+                        </p>
+
+                        <h4>Real World Example</h4>
+                        <p>
+                            It's like building a car from the factory with:
+                            <strong>no custom features</strong>.
+                            Everything is set to its default state:
+                            speed = 0, engine OFF, no color set.
+                        </p>
+
+                        <hr>
+
+                        <!-- ========================================================= -->
+                        <!-- =============== 2. NO-ARG CONSTRUCTOR =================== -->
+                        <!-- ========================================================= -->
+
+                        <h3>2. No-Argument (No-Arg) Constructor</h3>
+
+                        <p>
+                            This is a constructor that accepts <strong>no parameters</strong> and sets object values
+                            manually.
+                        </p>
+
+                        <pre><code class="language-java">
+class Car {
+    String brand;
+    int speed;
+
+    Car() {
+        brand = "Unknown";
+        speed = 0;
+        System.out.println("No-arg constructor executed");
+    }
+}
+</code></pre>
+
+                        <h3>Explanation</h3>
+                        <p>
+                            When you create:
+                        </p>
+
+                        <pre><code class="language-java">
+Car c = new Car();
+</code></pre>
+
+                        <p>
+                            It sets initial values like:
+                        <ul>
+                            <li><strong>brand</strong> = "Unknown"</li>
+                            <li><strong>speed</strong> = 0</li>
+                        </ul>
+                        </p>
+
+                        <h4>Real World Example</h4>
+                        <p>
+                            You buy a car without selecting any features →
+                            Factory gives you a default model with standard features.
+                        </p>
+
+                        <hr>
+
+                        <!-- ========================================================= -->
+                        <!-- =============== 3. PARAMETERIZED CONSTRUCTOR ============ -->
+                        <!-- ========================================================= -->
+
+                        <h3>3. Parameterized Constructor</h3>
+
+                        <p>
+                            Used when you want to initialize objects with <strong>specific values</strong>.
+                        </p>
+
+                        <pre><code class="language-java">
+class Car {
+    String brand;
+    int speed;
+
+    Car(String brand, int speed) {
+        this.brand = brand;
+        this.speed = speed;
+    }
+}
+</code></pre>
+
+                        <h3>Explanation</h3>
+                        <p>
+                            Here:
+                        </p>
+
+                        <pre><code class="language-java">
+Car c = new Car("BMW", 180);
+</code></pre>
+
+                        <p>
+                            It immediately creates a BMW car with 180 speed.
+                        </p>
+
+                        <h4>Real World Example</h4>
+                        <p>
+                            You place a custom order for a car:
+                        <ul>
+                            <li>You choose the brand</li>
+                            <li>You choose the engine/speed</li>
+                        </ul>
+                        Factory manufactures exactly what you want.
+                        </p>
+
+                        <hr>
+
+                        <!-- ========================================================= -->
+                        <!-- ================== 4. COPY CONSTRUCTOR ================== -->
+                        <!-- ========================================================= -->
+
+                        <h3>4. Copy Constructor</h3>
+
+                        <p>
+                            A user-defined constructor that copies one object into another.
+                            Java DOES NOT provide it automatically.
+                        </p>
+
+                        <pre><code class="language-java">
+class Car {
+    String brand;
+    int speed;
+
+    Car(Car c) {        // copy constructor
+        this.brand = c.brand;
+        this.speed = c.speed;
+    }
+}
+</code></pre>
+
+                        <h3>Explanation</h3>
+                        <p>
+                            You can write:
+                        </p>
+
+                        <pre><code class="language-java">
+Car c1 = new Car("Tesla", 200);
+Car c2 = new Car(c1); // copying object
+</code></pre>
+
+                        <p>
+                            Now <strong>c2</strong> has the same values as <strong>c1</strong>.
+                        </p>
+
+                        <h4>Real World Example</h4>
+                        <p>
+                            You ask the factory to create “the same car as my friend’s car”.
+                            The factory clones the exact configuration.
+                        </p>
+
+                        <hr>
+
+                        <!-- ========================================================= -->
+                        <!-- =============== 5. PRIVATE CONSTRUCTOR ================== -->
+                        <!-- ========================================================= -->
+
+                        <h3>5. Private Constructor</h3>
+
+                        <p>
+                            Used mostly for <strong>Singleton Pattern</strong> or factory classes.
+                            It prevents others from creating objects.
+                        </p>
+
+                        <pre><code class="language-java">
+class DatabaseConnection {
+    private DatabaseConnection() {
+        System.out.println("Database connected");
+    }
+
+    private static DatabaseConnection instance = new DatabaseConnection();
+
+    public static DatabaseConnection getInstance() {
+        return instance;
+    }
+}
+</code></pre>
+
+                        <h3>Real World Use Case</h3>
+                        <p>
+                            A Database should have <strong>only one connection</strong>.
+                            Private constructor ensures no one creates multiple objects.
+                        </p>
+
+                        <hr>
+
+                        <!-- ========================================================= -->
+                        <!-- =============== 6. PROTECTED CONSTRUCTOR ================ -->
+                        <!-- ========================================================= -->
+
+                        <h3>6. Protected Constructor</h3>
+
+                        <p>
+                            Accessible within:
+                        <ul>
+                            <li>same package</li>
+                            <li>child classes (even if in different packages)</li>
+                        </ul>
+                        </p>
+
+                        <pre><code class="language-java">
+class Vehicle {
+    protected Vehicle() {
+        System.out.println("Protected Vehicle Constructor");
+    }
+}
+</code></pre>
+
+                        <h4>Real World Example</h4>
+                        <p>
+                            You can only build this type of vehicle if:
+                        <ul>
+                            <li>You are part of the same company (package)</li>
+                            <li>Or you own a child company (subclass)</li>
+                        </ul>
+                        </p>
+
+                        <hr>
+
+                        <!-- ========================================================= -->
+                        <!-- ================== 7. CONSTRUCTOR OVERLOADING ========== -->
+                        <!-- ========================================================= -->
+
+                        <h3>7. Constructor Overloading</h3>
+
+                        <p>
+                            You can create multiple constructors with different sets of parameters.
+                        </p>
+
+                        <pre><code class="language-java">
+class Car {
+    Car() { System.out.println("Default car"); }
+    Car(int speed) { this.speed = speed; }
+    Car(String brand, int speed) { this.brand = brand; this.speed = speed; }
+}
+</code></pre>
+
+                        <h3>Real World Example</h3>
+                        <p>
+                            Different ways to buy a car:
+                        <ul>
+                            <li>Buy base model</li>
+                            <li>Select speed only</li>
+                            <li>Select brand and speed</li>
+                        </ul>
+                        </p>
+
+                        <hr>
+
+                        <!-- ========================================================= -->
+                        <!-- ================== 8. CONSTRUCTOR CHAINING ============= -->
+                        <!-- ========================================================= -->
+
+                        <h3>8. Constructor Chaining</h3>
+
+                        <p>
+                            Calling one constructor from another using <strong>this()</strong> or
+                            <strong>super()</strong>.
+                        </p>
+
+                        <pre><code class="language-java">
+class Car {
+    String brand;
+    int speed;
+
+    Car() {
+        this("Unknown", 0); // calling another constructor
+    }
+
+    Car(String brand, int speed) {
+        this.brand = brand;
+        this.speed = speed;
+    }
+}
+</code></pre>
+
+                        <h3>Real World Example</h3>
+                        <p>
+                            A base car model always uses a more detailed manufacturing process internally.
+                        </p>
+
+                        <h4>Using <code>super()</code> in Inheritance</h4>
+
+                        <pre><code class="language-java">
+class Vehicle {
+    Vehicle() {
+        System.out.println("Vehicle Constructor");
+    }
+}
+
+class Car extends Vehicle {
+    Car() {
+        super();
+        System.out.println("Car Constructor");
+    }
+}
+</code></pre>
+
+                        <p>
+                            Output:
+                        </p>
+
+                        <pre><code>
+Vehicle Constructor
+Car Constructor
+</code></pre>
+
+                        <hr>
+
+                        <h2>Complete Real-World Constructor Example</h2>
+
+                        <pre><code class="language-java">
+class Car {
+
+    String brand;
+    int speed;
+    String fuelType;
+
+    // No-argument constructor
+    Car() {
+        this("Unknown", 0, "Petrol");
+        System.out.println("Default car created.");
+    }
+
+    // Parameterized constructor
+    Car(String brand, int speed, String fuelType) {
+        this.brand = brand;
+        this.speed = speed;
+        this.fuelType = fuelType;
+    }
+
+    // Copy constructor
+    Car(Car other) {
+        this.brand = other.brand;
+        this.speed = other.speed;
+        this.fuelType = other.fuelType;
+    }
+
+    void show() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Speed: " + speed);
+        System.out.println("Fuel: " + fuelType);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Car c1 = new Car();  // no-arg
+        c1.show();
+
+        Car c2 = new Car("Tesla", 200, "Electric"); // parameterized
+        c2.show();
+
+        Car c3 = new Car(c2); // copy constructor
+        c3.show();
+    }
+}
+</code></pre>
+
+                        <p>
+                            This demonstrates all constructor types in a real-world scenario.
+                        </p>
+
+                        <hr>
+
+                        <h2>Conclusion</h2>
+                        <p>
+                            Constructors are the backbone of object initialization in Java.
+                            They:
+                        <ul>
+                            <li>Provide meaningful starting values</li>
+                            <li>Reduce code duplication</li>
+                            <li>Offer flexibility through overloading</li>
+                            <li>Ensure safe object creation using private/protected constructors</li>
+                            <li>Support inheritance with <code>super()</code></li>
+                        </ul>
+                        Understanding constructors is essential to master Object-Oriented Programming.
+                        </p>
+
+
                     </section>
 
 
