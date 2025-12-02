@@ -175,6 +175,12 @@
                     <li class="nav-item">
                         <a class="nav-link scrollto" href="#item-2-18">Encapsulation</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#item-2-19" b style="color: red;">Class 8 - Recording</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#item-2-20">Exception Handling & Custom Exceptions</a>
+                    </li>
 
                 </ul>
             </nav>
@@ -2018,6 +2024,185 @@ public void setAge(int age) {
 </code>
         </pre>
                     </section>
+
+                    <section class="docs-section" id="item-2-19">
+                        <h1 class="docs-heading">
+                            Class 8 - Recording
+                        </h1>
+                        <a href="https://www.youtube.com/watch?v=WTYWRHlE75E" target="_blank" class="full-width-btn">
+                            ▶ Watch Video
+                        </a>
+                    </section>
+
+                    <!-- Exception Handling & Custom Exceptions  -->
+                    <section class="docs-section" id="item-2-20">
+                        <h1 class="docs-heading">Exception Handling & Custom Exceptions</h1>
+
+                        <h2>1. What Is an Exception?</h2>
+                        <p>
+                            An <strong>exception</strong> is an event that interrupts normal program execution.
+                            Examples: dividing by zero, accessing a null variable, file not found, invalid user input.
+                            When an exception occurs, Java creates an exception object and <em>throws</em> it.
+                        </p>
+
+                        <h2>2. Exception Hierarchy (Very Important)</h2>
+                        <img src="https://lh5.googleusercontent.com/WqqNoyFEkZXfmZBBQjgIutY72_BUV6_By_BAe7Ih9u36HfelS3nTWQEYtdRUkQS32Tuhg9P9CUXo-jgvOpkO84vLm2viI4Od0BNustwONdMm7DKZnKC6kyVHyRJbsESLIPV4uBU"
+                            alt="" srcset="" style="max-width: 100%; height: auto;">
+
+                        <p>
+                            <strong>Checked exceptions</strong> are problems the programmer should anticipate (file not
+                            found, IO failure).<br>
+                            <strong>Unchecked exceptions</strong> indicate programming mistakes (null pointer, array
+                            overflow).<br>
+                            <strong>Errors</strong> are serious issues like memory leaks and should not be caught.
+                        </p>
+
+                        <h2>3. Basic try–catch Example</h2>
+                        <p>This example prevents crashing when dividing by zero.</p>
+                        <pre><code>public class Example1 {
+    public static void main(String[] args) {
+        try {
+            int result = 10 / 0;   // Throws ArithmeticException
+        } catch (ArithmeticException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+}</code></pre>
+                        <p><strong>Explanation:</strong> Code in the try block throws an exception. The catch handles it
+                            safely.</p>
+
+                        <h2>4. Multiple catch Blocks</h2>
+                        <p>
+                            Multiple catch blocks let you respond to different errors separately.
+                            Always catch <strong>specific exceptions first</strong>, then general ones.
+                        </p>
+                        <pre><code>try {
+    String text = null;
+    System.out.println(text.length());  // NullPointerException
+} catch (NullPointerException e) {
+    System.out.println("Null value found!");
+} catch (Exception e) {
+    System.out.println("Other error occurred");
+}</code></pre>
+                        <p><strong>Explanation:</strong> The most specific catch (NullPointerException) must appear
+                            above Exception.</p>
+
+                        <h2>5. finally Block</h2>
+                        <p><code>finally</code> runs whether or not an exception occurs. It is used for cleanup.</p>
+                        <pre><code>try {
+    int[] arr = {1, 2};
+    System.out.println(arr[5]);
+} catch (ArrayIndexOutOfBoundsException e) {
+    System.out.println("Index error!");
+} finally {
+    System.out.println("This always runs.");
+}</code></pre>
+                        <p><strong>Explanation:</strong> Use finally to release resources (files, DB connections).</p>
+
+                        <h2>6. throw and throws</h2>
+
+                        <h3>throw — manually create an exception</h3>
+                        <pre><code>public void checkAge(int age) {
+    if (age < 18) {
+        throw new IllegalArgumentException("Age must be 18+");
+    }
+}</code></pre>
+                        <p><strong>Explanation:</strong> Programmer enforces a validation rule manually.</p>
+
+                        <h3>throws — declare that a method may throw an exception</h3>
+                        <pre><code>public void readFile() throws IOException {
+    FileReader fr = new FileReader("data.txt");
+}</code></pre>
+                        <p><strong>Explanation:</strong> Caller MUST handle or re-declare checked exceptions.</p>
+
+                        <h2>7. Custom Exceptions</h2>
+                        <p>Define your own exception to create meaningful error messages for business logic.</p>
+
+                        <h3>Custom Checked Exception</h3>
+                        <pre><code>class InvalidAmountException extends Exception {
+    public InvalidAmountException(String message) {
+        super(message);
+    }
+}</code></pre>
+
+                        <h3>Using the Custom Exception</h3>
+                        <pre><code>public void withdraw(int amount) throws InvalidAmountException {
+    if (amount <= 0) {
+        throw new InvalidAmountException("Amount must be greater than 0");
+    }
+}</code></pre>
+                        <p><strong>Explanation:</strong> Custom exceptions help make errors meaningful and easier to
+                            handle.</p>
+
+                        <h2>8. try-with-resources (Must Learn)</h2>
+                        <p>
+                            Automatically closes resources like files, sockets, and DB connections.
+                            This is preferred over manually closing in finally.
+                        </p>
+                        <pre><code>try (FileReader fr = new FileReader("test.txt");
+     BufferedReader br = new BufferedReader(fr)) {
+
+    System.out.println(br.readLine());
+
+} catch (IOException e) {
+    System.out.println("File error: " + e.getMessage());
+}</code></pre>
+                        <p><strong>Explanation:</strong> The resources are automatically closed — no memory leaks.</p>
+
+                        <h2>9. Real-World Example (Service Layer in Web Apps)</h2>
+                        <p>Used in login, ordering, payment systems etc.</p>
+                        <pre><code>public User login(String username, String password)
+        throws InvalidCredentialsException, UserBlockedException {
+
+    User user = userRepo.find(username);
+
+    if (user == null) {
+        throw new InvalidCredentialsException("User does not exist");
+    }
+
+    if (user.isBlocked()) {
+        throw new UserBlockedException("User is blocked");
+    }
+
+    if (!user.getPassword().equals(password)) {
+        throw new InvalidCredentialsException("Wrong password");
+    }
+
+    return user;
+}</code></pre>
+                        <p><strong>Explanation:</strong>
+                            Each business rule creates a specific exception — very clean and testable design.
+                        </p>
+
+                        <h2>10. Important Concepts Every Developer Must Know</h2>
+                        <ul>
+                            <li><strong>Always catch specific exceptions</strong>, not Exception.</li>
+                            <li><strong>Never use empty catch blocks</strong> — they hide bugs.</li>
+                            <li><strong>Never catch Throwable or Error</strong> — system-level failures.</li>
+                            <li><strong>Create custom exceptions</strong> for business logic.</li>
+                            <li><strong>Log exceptions properly</strong> for debugging.</li>
+                            <li><strong>Do not use exceptions for normal flow</strong> (e.g., searching, validation).
+                            </li>
+                            <li><strong>Use try-with-resources</strong> for AutoCloseable objects.</li>
+                            <li><strong>Wrap low-level exceptions</strong> with meaningful messages.</li>
+                        </ul>
+
+                        <h2>11. Cheatsheet (Quick Revision)</h2>
+                        <ul>
+                            <li><code>try { } catch (E e) { }</code> — handle exceptions</li>
+                            <li><code>finally { }</code> — always runs</li>
+                            <li><code>throw new Exception("msg")</code> — manually throw</li>
+                            <li><code>method() throws IOException</code> — declare exception</li>
+                            <li><code>try(resource) { }</code> — auto-closes resources</li>
+                        </ul>
+
+                        <footer>
+                            <p>Created for: Protik Das Utso — Complete Java Exception Handling Guide</p>
+                        </footer>
+                    </section>
+
+
+
 
                     <!--//section-->
                 </article>
